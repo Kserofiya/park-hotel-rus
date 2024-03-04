@@ -9,12 +9,15 @@ var afishaSwiper = new Swiper(".afisha-swiper, .attractions-swiper", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+        425: {
+            slidesPerView: 2.3,
+        },
+        1440: {
+            slidesPerView: 4.3,
+        },
+        1620: {
+            slidesPerView: 5.3,
+        },
+    }
 });
-
-// $(document).ready(function(){
-//     $(document).scroll(function() {
-//         if ($(this).scrollTop() > 100) {
-
-//         };
-//     });
-// });
