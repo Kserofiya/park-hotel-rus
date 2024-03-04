@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+:root {
+    --black: #000000;
+    --gray: #5C5C5C;
+    --white:  #FFFFFF;
+    --theme-color: #32A517;
+    --theme-color-hover: #177800; 
+    --menu-background: rgba(44, 44, 44, 0.95); 
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a.active {
+    text-decoration: underline;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-inner {
+    padding-left: 115px;
+    padding-right: 115px;
+}
+
+/* Основные */
+
+.btn-green {
+    padding: 20px 30px;
+    border-radius: 99px;
+    background: var(--theme-color);
+    color: var(--white);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+}
+
+.btn-green:hover, 
+.btn-green:focus,
+.btn-green:active {
+    background: var(--theme-color-hover);
+}
+
+/* Главная */
+
+header {
+    z-index: 12;
+    position: -webkit-sticky;
+    position: sticky;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+    left: 0;
+    height: 0;
+    width: 1920px;
+    margin: 0 auto;
+    max-width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    color: var(--white);
+}
+
+.header {
+    padding-top: 30px;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    gap: 138px;
+}
+
+.header a {
+    color: var(--white);
+}
+
+.header__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+}
+
+.main__bg {
+    height: 100vh;
+}
+
+.header__logo {
+    width: 96px;
+    height: 111px;
+}
