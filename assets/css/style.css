@@ -8,6 +8,7 @@
 :root {
     --black: #000000;
     --gray: #5C5C5C;
+    --light-gray: #7C7C7C;
     --white:  #FFFFFF;
     --theme-color: #32A517;
     --theme-color-hover: #177800; 
@@ -15,7 +16,11 @@
 }
 
 a {
+    color: var(--white);
     text-decoration: none;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
 }
 
 a:hover,
@@ -29,9 +34,20 @@ img {
     object-fit: cover;
 }
 
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+ul li {
+    margin-left: 0;
+}
+
 .container-inner {
-    padding-left: 115px;
-    padding-right: 115px;
+    width: 100vw;
+    margin: 0 auto;
+    padding-left: 112px;
+    padding-right: 100px;
 }
 
 /* Основные */
@@ -53,6 +69,129 @@ img {
 .btn-green:focus,
 .btn-green:active {
     background: var(--theme-color-hover);
+    color: var(--white);
+    text-decoration: none;
+}
+
+.btn-more {
+    width: 100%;
+}
+
+.section__title {
+    margin-bottom: 50px;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+}
+
+.section__title a {
+    color: var(--black); 
+}
+
+.section__title a:hover {
+    color: var(--theme-color); 
+    text-decoration: none;
+}
+
+.section__subtitle {
+    margin-top: -20px;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+}
+
+.shield-spec {
+    padding: 10px 16px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    border-radius: 20px 0px 20px 0px;
+    background: rgb(50, 165, 23);
+    text-transform: uppercase;
+}
+
+.white-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 327px;
+    height: 511px;
+    background: linear-gradient(90.00deg, rgba(255, 255, 255, 0),rgb(255, 255, 255) 89.764%);
+    z-index: 2;
+}
+
+.swiper-button-next:after, .swiper-button-prev:after {
+    content: "";
+}
+
+.swiper-button-next, .swiper-button-prev {
+    top: 44%;
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    background-color: var(--white);
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+}
+
+.swiper-button-next {
+    right: 118px;
+}
+
+.swiper-button-prev {
+    transform: rotate(180deg);
+    left: 40px;
+}
+
+.swiper-button-next svg, .swiper-button-prev svg {
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover  {
+    background-color: var(--theme-color);
+    --black: white;
+}
+
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    display: none;
+}
+
+.nav-pills {
+    margin-bottom: 0px!important;
+    gap: 12px;
+}
+
+.nav-pills .nav-link {
+    color: var(--black);
+    padding: 17px 30px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+    border: 1px solid var(--light-gray);
+    border-radius: 99px;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+}
+
+.nav-pills .nav-link:hover {
+    padding: 18px 31px;
+    border: none;
 }
 
 /* Главная */
@@ -97,7 +236,7 @@ header {
     -webkit-flex-grow: 1;
     -ms-flex-positive: 1;
     flex-grow: 1;
-    gap: 138px;
+    gap: 7vw;
 }
 
 .header a {
@@ -106,15 +245,335 @@ header {
 
 .header__nav {
     display: flex;
-    flex-wrap: wrap;
-    gap: 80px;
-}
-
-.main__bg {
-    height: 100vh;
+    /* flex-wrap: wrap; */
+    gap: 10px 80px;
 }
 
 .header__logo {
-    width: 96px;
+    min-width: 96px;
     height: 111px;
+}
+
+.header__nav-item {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 21px;
+}
+
+.header__nav-item svg {
+    min-width: 24px;
+}
+
+main {
+    position: relative;
+}
+
+.main__bg {
+    margin-bottom: 140px;
+    height: 100vh;
+}
+
+.main__title-wrapper {
+    max-width: 820px;
+    position: absolute;
+    top: 17.5vw;
+}
+
+.main__title {
+    margin-bottom: 25px;
+    color: var(--white);
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 98px;
+}
+
+.main__subtitle {
+    color: var(--white);
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 49px;
+}
+
+.booking__form {
+    width: 415px;
+    position: absolute;
+    top: 40vw;
+    right: 110px;
+    padding: 25px;
+    background-color: #32A517;
+    color: var(--white);
+}
+
+.booking__title {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.booking__subtitle {
+    font-size: 11px;
+}
+
+/* Sidebar */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+    mix-blend-mode: difference;
+    z-index: 12;
+}
+
+.sidebar:hover, .sidebar_active {
+    width: 350px;
+    background-color: var(--black);
+    mix-blend-mode: unset;
+    z-index: 15;
+}
+
+.sidebar__links-wrapper {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+}
+
+.sidebar__link {
+    padding-top: 18px;
+    padding-right: 26px;
+    padding-left: 26px;
+    padding-bottom: 18px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 20px;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    max-width: 100%;
+    -webkit-transition: all .15s;
+    -o-transition: all .15s;
+    transition: all .15s;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.sidebar__link svg {
+    min-width: 24px;
+}
+
+.sidebar__link:hover,
+.sidebar__link:active,
+.sidebar__link:focus
+ {
+    background: rgb(50, 165, 23);
+    text-decoration: none;
+}
+
+.sidebar__text {
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+}
+
+.sidebar__submenu {
+    width: 350px;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    z-index: 12;
+    visibility: hidden;
+    opacity: 0;
+    background: rgba(44, 44, 44, 0.95);
+}
+
+.sidebar__submenu.submenu__weather {
+    top: unset;
+    bottom: -17px;
+}
+
+.sidebar__links-wrapper:hover > ul.sidebar__submenu, .sidebar__submenu li:hover > ul.sidebar__submenu {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+}
+
+.sidebar:hover .sidebar__text {
+    display: flex;
+}
+
+.submenu__weather {
+    padding: 18px;
+}
+
+#ww_f5ad4c79c848e {
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+/* Афиша */
+
+.afisha {
+    margin-bottom: 220px;
+    padding-left: 110px;
+}
+
+.afisha-swiper, .attractions-swiper {
+    margin-top: -20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 530px;
+}
+
+.horizontal-slider .swiper-slide {
+    border-radius: 30px;
+    overflow: hidden;
+    /* background: linear-gradient(0.00deg, rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0) 100%),url(image); */
+}
+
+.horizontal-slider .swiper-slide::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0.00deg, rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0) 100%);
+}
+
+.horizontal-slider .swiper-slide:hover {
+    box-shadow: 0px 4px 12.1px 0px rgba(26, 73, 15, 0.67);
+    cursor: pointer;
+}
+
+.afisha__wrapper {
+    max-width: 265px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.afisha__title, .attractions__title {
+    display: -webkit-box;
+    margin-bottom: 10px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.afisha__date {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+/* Инфраструктура отеля */
+
+.hotel-infrastructure {
+    margin-bottom: 140px;
+    position: relative;
+    padding-bottom: 80px;
+    background-size: cover;
+    border-radius: 0px 0px 200px 0px;
+    overflow: hidden;
+}
+
+.hotel-infrastructure__wrapper {
+    max-width: 580px;
+    margin-left: auto;
+    padding: 40px;
+    border-radius: 30px;
+    background: var(--white);
+}
+
+.hotel-infrastructure__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
+}
+
+.hotel-infrastructure__text {
+    margin-bottom: 30px;
+    color: var(--gray);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.hotel-infrastructure__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.hotel-infrastructure__img::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180.00deg, rgb(255, 255, 255),rgba(255, 255, 255, 0) 100%);
+}
+
+/* Достопримечательности */
+
+.attractions {
+    padding-left: 110px;
+}
+
+.attractions__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.attractions-swiper .swiper-slide::before {
+    background: rgba(0, 0, 0, 0.46);
+}
+
+.attractions__specifications {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.attractions__specification {
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 21px;
 }
