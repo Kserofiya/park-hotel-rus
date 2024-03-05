@@ -13,6 +13,8 @@
     --theme-color: #32A517;
     --theme-color-hover: #177800; 
     --menu-background: rgba(44, 44, 44, 0.95); 
+    --dark-green: #295047;
+    --tab-link: #7BD067;
 }
 
 a {
@@ -545,6 +547,7 @@ main {
 /* Достопримечательности */
 
 .attractions {
+    margin-bottom: 140px;
     padding-left: 110px;
 }
 
@@ -574,4 +577,155 @@ main {
     font-size: 17px;
     font-weight: 500;
     line-height: 21px;
+}
+
+/* Блок с номерами, виллами и коттеджами */
+
+.rooms {
+    margin-bottom: 140px;
+    position: relative;
+}
+
+.nav-pills-rooms {
+    position: absolute;
+    top: 40px;
+    left: 140px;
+    gap: 30px;
+}
+
+.nav-pills-rooms .nav-link {
+    padding: 0;
+    border: unset;
+    border-radius: unset;
+    color: var(--tab-link);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+}
+
+.nav-pills-rooms .nav-link.active {
+    padding: 0;
+    color: var(--white);
+    background-color: unset;
+    border: unset;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.rooms__navigation {
+    max-width: 650px;
+    padding: 40px;
+    padding-top: 100px;
+    border-radius: 30px;
+    background: var(--dark-green);
+}
+
+.rooms__wrapper {
+    display: flex;
+    gap: 75px;
+}
+
+.rooms__left {
+    max-width: 640px;
+}
+
+.rooms__right {
+    width: 100%;
+    margin-top: -330px;
+}
+
+.rooms__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 37px;
+}
+
+.rooms__tags {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 8px 20px;
+    border-radius: 11px;
+    background: rgba(130, 209, 112, 0.17);
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.rooms__desc {
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--gray);
+}
+
+.rooms__specifications {
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.rooms__specification {
+    max-width: 280px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+}
+
+.rooms__specification svg {
+    min-width: 24px;
+}
+
+.rooms__images {
+    display: grid;
+    grid-gap: 4px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(6, 7.1vw);
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.rooms__images .rooms__image:nth-child(1) {
+    grid-column: 1 / span 6;
+    grid-row: 1 / span 2;
+}
+
+.rooms__images .rooms__image:nth-child(2) {
+    grid-column: 7 / span 6;
+    grid-row: 1 / span 2;
+}
+
+.rooms__images .rooms__image:nth-child(3) {
+    grid-column: 1 / span 4;
+    grid-row: 3 / span 2;
+}
+
+.rooms__images .rooms__image:nth-child(4) {
+    grid-column: 5 / span 4;
+    grid-row: 3 / span 2;
+}
+
+.rooms__images .rooms__image:nth-child(5) {
+    grid-column: 9 / span 4;
+    grid-row: 3 / span 2;
+}
+
+.rooms__images .rooms__image:nth-child(6) {
+    grid-column: 1 / span 6;
+    grid-row: 5 / span 2;
+}
+.rooms__images .rooms__image:nth-child(7) {
+    grid-column: 7 / span 6;
+    grid-row: 5 / span 2;
+}
+
+.rooms__images .rooms__image:hover {
+    cursor: pointer;
+    opacity: 0.8;
 }
