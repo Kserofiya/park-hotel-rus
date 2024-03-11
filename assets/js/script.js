@@ -1,4 +1,4 @@
-var afishaSwiper = new Swiper(".afisha-swiper, .attractions-swiper", {
+var swiper = new Swiper(".afisha-swiper, .attractions-swiper, .stocks-swiper", {
     slidesPerView: 5.3,
     spaceBetween: 20,
     pagination: {
@@ -21,3 +21,16 @@ var afishaSwiper = new Swiper(".afisha-swiper, .attractions-swiper", {
         },
     }
 });
+
+$(function() {
+    // whenever we hover over a menu item that has a submenu
+    $('.sidebar ul').children('li').on('mouseover', function() {
+      var $menuItem = $(this),
+          $submenuWrapper = $('> ul', $menuItem);
+      var menuItemPos = $menuItem.position();
+      $submenuWrapper.css({
+        top: menuItemPos.top,
+        left: menuItemPos.left + Math.round($menuItem.outerWidth())
+      });
+    });
+  });

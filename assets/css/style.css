@@ -15,6 +15,7 @@
     --menu-background: rgba(44, 44, 44, 0.95); 
     --dark-green: #295047;
     --tab-link: #7BD067;
+    --background-gray: #D9D9D9;
 }
 
 a {
@@ -75,6 +76,10 @@ ul li {
 
 .btn-more {
     width: 100%;
+}
+
+section {
+    margin-bottom: 140px;
 }
 
 .section__title {
@@ -187,11 +192,12 @@ ul li {
 .nav-pills .nav-link.active {
     background-color: var(--theme-color);
     border: 1px solid var(--theme-color);
+    pointer-events: none;
 }
 
 .nav-pills .nav-link:hover {
-    padding: 18px 31px;
-    border: none;
+    border-color: var(--white);
+    background-color: var(--white);
 }
 
 /* Главная */
@@ -333,6 +339,15 @@ main {
     z-index: 12;
 }
 
+.sidebar > ul {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.sidebar ul li {
+    position: static !important;
+}
+
 .sidebar:hover, .sidebar_active {
     width: 350px;
     background-color: var(--black);
@@ -407,10 +422,9 @@ main {
     background: rgba(44, 44, 44, 0.95);
 }
 
-.sidebar__submenu.submenu__weather {
-    top: unset;
-    bottom: -17px;
-}
+/* .sidebar__submenu.submenu__weather {
+    
+} */
 
 .sidebar__links-wrapper:hover > ul.sidebar__submenu, .sidebar__submenu li:hover > ul.sidebar__submenu {
     display: block;
@@ -438,7 +452,7 @@ main {
     padding-left: 110px;
 }
 
-.afisha-swiper, .attractions-swiper {
+.afisha-swiper, .attractions-swiper, .stocks-swiper {
     margin-top: -20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -448,7 +462,6 @@ main {
 .horizontal-slider .swiper-slide {
     border-radius: 30px;
     overflow: hidden;
-    /* background: linear-gradient(0.00deg, rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0) 100%),url(image); */
 }
 
 .horizontal-slider .swiper-slide::before {
@@ -464,6 +477,10 @@ main {
 .horizontal-slider .swiper-slide:hover {
     box-shadow: 0px 4px 12.1px 0px rgba(26, 73, 15, 0.67);
     cursor: pointer;
+}
+
+.horizontal-slider .swiper-slide:hover::before {
+    background: none;
 }
 
 .afisha__wrapper {
@@ -486,15 +503,19 @@ main {
 }
 
 .afisha__date {
+    display: -webkit-box;
     font-size: 17px;
     font-weight: 500;
     line-height: 21px;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 /* Инфраструктура отеля */
 
 .hotel-infrastructure {
-    margin-bottom: 140px;
     position: relative;
     padding-bottom: 80px;
     background-size: cover;
@@ -547,7 +568,6 @@ main {
 /* Достопримечательности */
 
 .attractions {
-    margin-bottom: 140px;
     padding-left: 110px;
 }
 
@@ -582,7 +602,6 @@ main {
 /* Блок с номерами, виллами и коттеджами */
 
 .rooms {
-    margin-bottom: 140px;
     position: relative;
 }
 
@@ -728,4 +747,12 @@ main {
 .rooms__images .rooms__image:hover {
     cursor: pointer;
     opacity: 0.8;
+}
+
+/* Блок Акции */
+
+.stocks {
+    padding: 100px 0px 100px 110px;
+    border-radius: 200px 0px 0px 0px;
+    background: rgb(202, 241, 194);
 }
