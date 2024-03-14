@@ -800,3 +800,90 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
     border-radius: 200px 0px 0px 0px;
     background: rgb(202, 241, 194);
 }
+
+/* Блок Как добраться */
+
+.how-to-get__wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.how-to-get__left {
+    width: 17vw;
+}
+
+.how-to-get__right {
+    width: 66vw;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+#accordionHowToGet .accordion-item {
+    border: none;
+}
+
+#accordionHowToGet .accordion-button.collapsed {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+}
+
+#accordionHowToGet .accordion-button {
+    padding: 30px;
+    padding-bottom: 10px;
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 27px;
+}
+
+#accordionHowToGet .accordion-button:not(.collapsed) {
+    background-color: unset;
+    box-shadow: none;
+}
+
+#accordionHowToGet .accordion-button:focus {
+    box-shadow: none;
+}
+
+#accordionHowToGet .accordion-button::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%23868686' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#accordionHowToGet .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9L12 15L18 9' stroke='black' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+#accordionHowToGet .accordion-button:hover::after {
+    background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 9L12 15L18 9' stroke='%2332A517' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.accordion-item:has(> .accordion-collapse.show) {
+    border-radius: 30px;
+    box-shadow: 0px 4px 20.7px 0px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+#accordionHowToGet .accordion-body {
+    max-width: 220px;
+    padding: 30px;
+    padding-top: 0;
+    color: var(--gray);
+}
+
+#accordionHowToGet .accordion-body a {
+    color: var(--gray);
+}
+
+#accordionHowToGet .accordion-body ul {
+    padding-left: 30px;
+    list-style-type: disc;
+}
+
+#accordionHowToGet .accordion-body ul li {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+}

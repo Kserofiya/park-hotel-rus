@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8dafc533-48c9-4baf-bffa-6020dad4aaa3&lang=ru_RU"></script>
     <link rel="stylesheet" href="assets/css/style.css?v=4">
     <title>Park Hotel Rus</title>
 </head>
@@ -934,6 +935,104 @@
                 </div>
             </div>
             </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="how-to-get">
+                <div class="container-inner">
+                    <div class="how-to-get__wrapper">
+                        <div class="how-to-get__left">
+                            <div class="section__title"><a href="#">Как добраться</a></div>
+
+                            <div class="accordion" id="accordionHowToGet">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingAuto">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuto" aria-expanded="true" aria-controls="collapseAuto">
+                                        Автомобиль
+                                    </button>
+                                    </h2>
+                                    <div id="collapseAuto" class="accordion-collapse collapse show" aria-labelledby="headingAuto" data-bs-parent="#accordionHowToGet">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTaxi">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTaxi" aria-expanded="false" aria-controls="collapseTaxi">
+                                        Такси
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTaxi" class="accordion-collapse collapse" aria-labelledby="headingTaxi" data-bs-parent="#accordionHowToGet">
+                                    <div class="accordion-body">
+                                        <ul>
+                                            <li>
+                                                <b>Яндекс.Такси</b>
+                                                <br>
+                                                200 р до Северного (городского) склона
+                                            </li>
+                                            <li>
+                                                <b>Такси Фламинго</b>
+                                                <br>
+                                                (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                            </li>
+                                            <li>
+                                                <b>Такси Апельсин</b>
+                                                <br>
+                                                До склона от нас 200 р без снаряжения, 250 р со снаряжением <a href="tel:89118059000">8-911-805-9000</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingPublicTransport">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePublicTransport" aria-expanded="false" aria-controls="collapsePublicTransport">
+                                        Общественный транспорт
+                                    </button>
+                                    </h2>
+                                    <div id="collapsePublicTransport" class="accordion-collapse collapse" aria-labelledby="headingPublicTransport" data-bs-parent="#accordionHowToGet">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingPlane">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlane" aria-expanded="false" aria-controls="collapsePlane">
+                                        Самолет
+                                    </button>
+                                    </h2>
+                                    <div id="collapsePlane" class="accordion-collapse collapse" aria-labelledby="headingPlane" data-bs-parent="#accordionHowToGet">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+        
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="headingTrain">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrain" aria-expanded="false" aria-controls="collapseTrain">
+                                        Поезд
+                                    </button>
+                                    </h2>
+                                    <div id="collapseTrain" class="accordion-collapse collapse" aria-labelledby="headingTrain" data-bs-parent="#accordionHowToGet">
+                                    <div class="accordion-body">
+                                        
+                                    </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="how-to-get__right">
+                            <div id="map" style="width: 100%; height: 800px"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 

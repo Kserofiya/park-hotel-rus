@@ -22,6 +22,25 @@ var swiper = new Swiper(".afisha-swiper, .attractions-swiper, .stocks-swiper", {
     }
 });
 
+ymaps.ready(init);
+function init() {
+  let myMap = new ymaps.Map("map", {
+    center: [67.597728, 33.0836],
+    zoom: 13
+  });
+
+  let myPlacemark = new ymaps.Placemark(
+    [67.597728, 33.0836],
+    {
+      iconContent: 'текст'
+    }, {
+    preset: 'islands#darkOrangeStretchyIcon'
+  }
+  );
+
+  myMap.geoObjects.add(myPlacemark);
+}
+
 $(function() {
     // whenever we hover over a menu item that has a submenu
     $('.sidebar ul').children('li').on('mouseover', function() {
