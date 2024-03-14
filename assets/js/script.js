@@ -1,5 +1,5 @@
 var swiper = new Swiper(".afisha-swiper, .attractions-swiper, .stocks-swiper", {
-    slidesPerView: 5.3,
+    slidesPerView: 4,
     spaceBetween: 20,
     pagination: {
       el: ".swiper-pagination",
@@ -10,14 +10,14 @@ var swiper = new Swiper(".afisha-swiper, .attractions-swiper, .stocks-swiper", {
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-        425: {
-            slidesPerView: 2.3,
+        320: {
+            slidesPerView: 2,
         },
         1440: {
-            slidesPerView: 4.3,
+            slidesPerView: 4,
         },
         1620: {
-            slidesPerView: 5.3,
+            slidesPerView: 5,
         },
     }
 });

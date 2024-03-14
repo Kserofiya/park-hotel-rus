@@ -145,7 +145,7 @@ section {
 }
 
 .swiper-button-next {
-    right: 118px;
+    right: 32px;
 }
 
 .swiper-button-prev {
@@ -445,23 +445,32 @@ main {
     border-radius: 10px;
 }
 
-/* Афиша */
+/* Слайдер на главной */
 
-.afisha {
-    margin-bottom: 220px;
-    padding-left: 110px;
-}
-
-.afisha-swiper, .attractions-swiper, .stocks-swiper {
-    margin-top: -20px;
+.horizontal-slider {
     padding-top: 20px;
     padding-bottom: 20px;
+    margin-top: -20px;
     height: 530px;
+}
+
+.horizontal-slider.stocks-swiper::after {
+    background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 89.764%);
 }
 
 .horizontal-slider .swiper-slide {
     border-radius: 30px;
     overflow: hidden;
+    color: var(--white);
+}
+
+.horizontal-slider .swiper-slide a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 
 .horizontal-slider .swiper-slide::before {
@@ -474,6 +483,10 @@ main {
     background: linear-gradient(0.00deg, rgba(0, 0, 0, 0.78),rgba(0, 0, 0, 0) 100%);
 }
 
+.horizontal-slider.attractions-swiper .swiper-slide::before {
+    background: rgba(0, 0, 0, 0.46),url(image);
+}
+
 .horizontal-slider .swiper-slide:hover {
     box-shadow: 0px 4px 12.1px 0px rgba(26, 73, 15, 0.67);
     cursor: pointer;
@@ -483,14 +496,7 @@ main {
     background: none;
 }
 
-.afisha__wrapper {
-    max-width: 265px;
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-}
-
-.afisha__title, .attractions__title {
+.horizontal-slider__title {
     display: -webkit-box;
     margin-bottom: 10px;
     font-size: 22px;
@@ -502,7 +508,7 @@ main {
     text-overflow: ellipsis;
 }
 
-.afisha__date {
+.horizontal-slider__subtitle  {
     display: -webkit-box;
     font-size: 17px;
     font-weight: 500;
@@ -511,6 +517,48 @@ main {
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.stocks-swiper {
+    width: 95%;
+    margin: 0;
+    overflow: visible;
+}
+
+.swiper-hidden {
+    position: relative;
+    width: calc(50% + 50vw);
+    overflow: hidden;
+}
+
+.swiper-hidden::after {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: calc(24px* 2 + 150px);
+    background: linear-gradient(90.00deg, rgba(255, 255, 255, 0),rgb(255, 255, 255) 89.764%);
+    z-index: 2;
+}
+
+.swiper-hidden-green::after {
+background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 89.764%);
+}
+
+/* Афиша */
+
+.afisha {
+    margin-bottom: 220px;
+    padding-left: 110px;
+}
+
+.afisha__wrapper {
+    max-width: 265px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
 }
 
 /* Инфраструктура отеля */
@@ -583,10 +631,6 @@ main {
     justify-content: space-between;
 }
 
-.attractions-swiper .swiper-slide::before {
-    background: rgba(0, 0, 0, 0.46);
-}
-
 .attractions__specifications {
     display: flex;
     flex-wrap: wrap;
@@ -601,14 +645,14 @@ main {
 
 /* Блок с номерами, виллами и коттеджами */
 
-.rooms {
+.rooms-container {
     position: relative;
 }
 
 .nav-pills-rooms {
     position: absolute;
     top: 40px;
-    left: 140px;
+    left: 40px;
     gap: 30px;
 }
 
@@ -752,7 +796,7 @@ main {
 /* Блок Акции */
 
 .stocks {
-    padding: 100px 0px 100px 110px;
+    padding: 100px 0px;
     border-radius: 200px 0px 0px 0px;
     background: rgb(202, 241, 194);
 }
