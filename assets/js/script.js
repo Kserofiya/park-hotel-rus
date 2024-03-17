@@ -24,12 +24,17 @@ var swiper = new Swiper(".afisha-swiper, .attractions-swiper, .stocks-swiper", {
 
 ymaps.ready(init);
 function init() {
-  let myMap = new ymaps.Map("map", {
+  let howToGet = new ymaps.Map("map", {
     center: [67.597728, 33.0836],
     zoom: 13
   });
 
-  let myPlacemark = new ymaps.Placemark(
+  let mapResort = new ymaps.Map("map-resort", {
+    center: [67.597728, 33.0836],
+    zoom: 19
+  });
+
+  let howToGetPlacemark = new ymaps.Placemark(
     [67.597728, 33.0836],
     {
       iconContent: 'текст'
@@ -38,7 +43,14 @@ function init() {
   }
   );
 
-  myMap.geoObjects.add(myPlacemark);
+  let restoranMapPlacemark = new ymaps.Placemark(
+    [67.597676, 33.083244],{
+    preset: 'islands#darkOrangeStretchyIcon'
+  }
+  );
+
+  howToGet.geoObjects.add(howToGetPlacemark);
+  mapResort.geoObjects.add(restoranMapPlacemark);
 }
 
 $(function() {

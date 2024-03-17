@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/svg/logo-inner.svg" type="image/svg">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -97,10 +98,10 @@
                             </div>
                         </a>
                         <ul class="sidebar__submenu">
-                            <li><a class="sidebar__link" href="#">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
                             <li><a class="sidebar__link" href="#">Люкс</a></li>
-                            <li><a class="sidebar__link" href="#">Стандарт</a></li>
-                            <li><a class="sidebar__link" href="#">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
                             <li><a class="sidebar__link" href="#">Люкс</a></li>
                             <li><a class="sidebar__link" href="#">Люкс</a></li>
                             <li><a class="sidebar__link" href="#">Президентский люкс</a></li>
@@ -801,7 +802,7 @@
                                                 </div>
                                                 <div class="rooms__buttons">
                                                     <a class="btn btn-green" href="#">Забронировать</a>
-                                                    <a class="btn btn-green btn-more-second" href="#">Подробнее</a>
+                                                    <a class="btn btn-green btn-more-second" href="room-detail.html">Подробнее</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -948,24 +949,35 @@
                             <div class="accordion" id="accordionHowToGet">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingAuto">
-                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuto" aria-expanded="true" aria-controls="collapseAuto">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuto" aria-expanded="false" aria-controls="collapseAuto">
                                         Автомобиль
                                     </button>
                                     </h2>
-                                    <div id="collapseAuto" class="accordion-collapse collapse show" aria-labelledby="headingAuto" data-bs-parent="#accordionHowToGet">
+                                    <div id="collapseAuto" class="accordion-collapse collapse" aria-labelledby="headingAuto" data-bs-parent="#accordionHowToGet">
                                     <div class="accordion-body">
-                                        
+                                        <ul>
+                                            <li>
+                                                <b>Яндекс.Такси</b>
+                                                <br>
+                                                200 р до Северного (городского) склона
+                                            </li>
+                                            <li>
+                                                <b>Такси Фламинго</b>
+                                                <br>
+                                                (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     </div>
                                 </div>
         
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="headingTaxi">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTaxi" aria-expanded="false" aria-controls="collapseTaxi">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTaxi" aria-expanded="true" aria-controls="collapseTaxi">
                                         Такси
                                     </button>
                                     </h2>
-                                    <div id="collapseTaxi" class="accordion-collapse collapse" aria-labelledby="headingTaxi" data-bs-parent="#accordionHowToGet">
+                                    <div id="collapseTaxi" class="accordion-collapse collapse show" aria-labelledby="headingTaxi" data-bs-parent="#accordionHowToGet">
                                     <div class="accordion-body">
                                         <ul>
                                             <li>
@@ -996,7 +1008,18 @@
                                     </h2>
                                     <div id="collapsePublicTransport" class="accordion-collapse collapse" aria-labelledby="headingPublicTransport" data-bs-parent="#accordionHowToGet">
                                     <div class="accordion-body">
-                                        
+                                        <ul>
+                                            <li>
+                                                <b>Такси Фламинго</b>
+                                                <br>
+                                                (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                            </li>
+                                            <li>
+                                                <b>Такси Апельсин</b>
+                                                <br>
+                                                До склона от нас 200 р без снаряжения, 250 р со снаряжением <a href="tel:89118059000">8-911-805-9000</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     </div>
                                 </div>
@@ -1009,7 +1032,23 @@
                                     </h2>
                                     <div id="collapsePlane" class="accordion-collapse collapse" aria-labelledby="headingPlane" data-bs-parent="#accordionHowToGet">
                                     <div class="accordion-body">
-                                        
+                                        <ul>
+                                            <li>
+                                                <b>Яндекс.Такси</b>
+                                                <br>
+                                                200 р до Северного (городского) склона
+                                            </li>
+                                            <li>
+                                                <b>Такси Фламинго</b>
+                                                <br>
+                                                (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                            </li>
+                                            <li>
+                                                <b>Такси Апельсин</b>
+                                                <br>
+                                                До склона от нас 200 р без снаряжения, 250 р со снаряжением <a href="tel:89118059000">8-911-805-9000</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     </div>
                                 </div>
@@ -1022,7 +1061,18 @@
                                     </h2>
                                     <div id="collapseTrain" class="accordion-collapse collapse" aria-labelledby="headingTrain" data-bs-parent="#accordionHowToGet">
                                     <div class="accordion-body">
-                                        
+                                        <ul>
+                                            <li>
+                                                <b>Яндекс.Такси</b>
+                                                <br>
+                                                200 р до Северного (городского) склона
+                                            </li>
+                                            <li>
+                                                <b>Такси Фламинго</b>
+                                                <br>
+                                                (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                            </li>
+                                        </ul>
                                     </div>
                                     </div>
                                 </div>
@@ -1036,11 +1086,305 @@
             </div>
         </section>
 
+        <section>
+            <div class="map-resort">
+                <div class="container-inner container-map-resort">
+                    <div class="section__title"><a href="#">Карта курорта</a></div>
+                    <div class="section__subtitle">Исследуйте карту: нажимайте на иконки объектов, чтобы узнать о них больше</div>
+
+                    <ul class="nav nav-pills mb-3" id="map-resort-tabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link active" id="pills-restoran-etnika-tab" data-bs-toggle="pill" data-bs-target="#pills-restoran-etnika" type="button" role="tab" aria-controls="pills-restoran-etnika" aria-selected="true">Ресторан “Этника”</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-korpus-tab" data-bs-toggle="pill" data-bs-target="#pills-korpus" type="button" role="tab" aria-controls="pills-korpus" aria-selected="false">Основной корпус</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-spa-map-tab" data-bs-toggle="pill" data-bs-target="#pills-spa-map" type="button" role="tab" aria-controls="pills-spa-map" aria-selected="false">Спа комплекс и спортивный зал</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-parking-tab" data-bs-toggle="pill" data-bs-target="#pills-parking" type="button" role="tab" aria-controls="pills-parking" aria-selected="false">Парковка</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="pills-park-tab" data-bs-toggle="pill" data-bs-target="#pills-park" type="button" role="tab" aria-controls="pills-park" aria-selected="false">Парк</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="map-resortContent">
+                        <div class="tab-pane fade show active" id="pills-restoran-etnika" role="tabpanel" aria-labelledby="pills-restoran-etnika-tab">
+                            <div class="hotel-infrastructure__wrapper">
+                                <div class="hotel-infrastructure__title">Ресторан "Этника"</div>
+                                <div class="map-resort__img"><img src="assets/images/map-restoran.png" alt="map-restoran"></div>
+                                <div class="hotel-infrastructure__text">
+                                    <p>Декор помещения достаточно скромен, выдержан в стиле современного минимализма.</p>
+                                </div>
+                                <a class="btn btn-green btn-more" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-korpus" role="tabpanel" aria-labelledby="pills-korpus-tab">
+                            <div class="hotel-infrastructure__wrapper">
+                                <div class="hotel-infrastructure__title">Основной корпус</div>
+                                <div class="map-resort__img"><img src="assets/images/map-restoran.png" alt="map-restoran"></div>
+                                <div class="hotel-infrastructure__text">
+                                    <p>Декор помещения достаточно скромен, выдержан в стиле современного минимализма. </p>
+                                </div>
+                                <a class="btn btn-green btn-more" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-spa-map" role="tabpanel" aria-labelledby="pills-spa-map-tab">
+                            <div class="hotel-infrastructure__wrapper">
+                                <div class="hotel-infrastructure__title">Спа комплекс и спортивный зал</div>
+                                <div class="map-resort__img"><img src="assets/images/map-restoran.png" alt="map-restoran"></div>
+                                <div class="hotel-infrastructure__text">
+                                    <p>Декор помещения достаточно скромен, выдержан в стиле современного минимализма. Встречают посетителей металлические двери, над которыми возвышается название заведения, отпечатанное в простой типографии, как бы намекающее, что всё самое интересное вас ждёт внутри. Войдя внутрь, первое, что сразу видит посетитель – это поразительно современный интерьер.</p>
+                                </div>
+                                <a class="btn btn-green btn-more" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-parking" role="tabpanel" aria-labelledby="pills-parking-tab">
+                            <div class="hotel-infrastructure__wrapper">
+                                <div class="hotel-infrastructure__title">Афиша и анонс событий</div>
+                                <div class="map-resort__img"><img src="assets/images/map-restoran.png" alt="map-restoran"></div>
+                                <div class="hotel-infrastructure__text">
+                                    <p>Декор помещения достаточно скромен, выдержан в стиле современного минимализма. Встречают посетителей металлические двери, над которыми возвышается название заведения, отпечатанное в простой типографии, как бы намекающее, что всё самое интересное вас ждёт внутри. Войдя внутрь, первое, что сразу видит посетитель – это поразительно современный интерьер.</p>
+                                </div>
+                                <a class="btn btn-green btn-more" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="pills-park" role="tabpanel" aria-labelledby="pills-park-tab">
+                            <div class="hotel-infrastructure__wrapper">
+                                <div class="hotel-infrastructure__title">Профессиональные конференции</div>
+                                <div class="map-resort__img"><img src="assets/images/map-restoran.png" alt="map-restoran"></div>
+                                <div class="hotel-infrastructure__text">
+                                    <p>Декор помещения достаточно скромен, выдержан в стиле современного минимализма. Встречают посетителей металлические двери, над которыми возвышается название заведения, отпечатанное в простой типографии, как бы намекающее, что всё самое интересное вас ждёт внутри. Войдя внутрь, первое, что сразу видит посетитель – это поразительно современный интерьер.</p>
+                                </div>
+                                <a class="btn btn-green btn-more" href="#">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map-resort" style="width: 100%; height: 740px"></div>      
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="news">
+                <div class="container-inner">
+                    <div class="news__wrapper">
+                        <div class="section__title"><a href="#">Новости</a></div>
+                        <a href="#" class="btn btn-green">Читать все</a>
+                    </div>
+
+                    <div class="news__items d-grid">
+                        <div class="news__item">
+                            <a href="#">
+                                <div class="news__img"><img src="assets/images/news-1.png" alt="news-1"></div>
+                                <div class="news__wrapper-info">
+                                    <div class="news__title">Парк «Дримвуд» вошел в десятку самых желанных</div>
+                                    <div class="news__date">12 января 2024</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__item">
+                            <a href="#">
+                                <div class="news__img"><img src="assets/images/news-2.png" alt="news-2"></div>
+                                <div class="news__wrapper-info">
+                                    <div class="news__title">GQ Travel Awards: победа сразу в двух номинациях</div>
+                                    <div class="news__date">12 января 2024</div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="news__item">
+                            <a href="#">
+                                <div class="news__img"><img src="assets/images/news-3.png" alt="news-3"></div>
+                                <div class="news__wrapper-info">
+                                    <div class="news__title">Самвел Саруханян стал лучшим генеральным директором</div>
+                                    <div class="news__date">12 января 2024</div>
+                                </div>
+                            </a>
+                        </div>
+                       <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/news-4.png" alt="news-4"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">«Привлекательный работодатель — 2023»</div>
+                                <div class="news__date">12 января 2024</div>
+                            </div>
+                        </a>
+                       </div>
+                        <div class="news__item">
+                            <a href="#">
+                                <div class="news__img"><img src="assets/images/news-5.png" alt="news-5"></div>
+                                <div class="news__wrapper-info">
+                                    <div class="news__title">Экологический туризм выходит на новый уровень</div>
+                                    <div class="news__date">12 января 2024</div>
+                                </div>
+                            </a>
+                        </div>
+                       <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/news-6.png" alt="news-6"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Голосование в World Travel Awards открыто</div>
+                                <div class="news__date">12 января 2024</div>
+                            </div>
+                        </a>
+                       </div>
+                        <div class="news__item">
+                            <a href="#">
+                                <div class="news__img"><img src="assets/images/news-7.png" alt="news-7"></div>
+                                <div class="news__wrapper-info">
+                                    <div class="news__title">Сможет ли российский сервис стать мировым брендом?</div>
+                                    <div class="news__date">12 января 2024</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>  
+            <div class="reviews">
+                <div class="container-inner">
+                    <div class="section__title section__title-white"><a href="#">Отзывы о нашем отеле</a></div>
+
+                    <div class="reviews__wrapper">
+                        <div style="padding:30px;background-color:white;min-width:480px;height:49vw;border-radius:30px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/224800399332?comments"></iframe><a href="https://yandex.ru/maps/org/titan_braun_kotkhibin/224800399332/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Титан Браун КотХибин на карте Мурманской области — Яндекс Карты</a></div>
+
+                        <div>
+                            <div class="reviews__images d-grid">
+                                <div class="review__image">
+                                    <a href="assets/images/review-1.png" data-fancybox="gallery-reviews" data-caption="review-1">
+                                        <img src="assets/images/review-1.png" alt="review-1">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-2.png" data-fancybox="gallery-reviews" data-caption="review-2">
+                                        <img src="assets/images/review-2.png" alt="review-2">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-3.png" data-fancybox="gallery-reviews" data-caption="review-3">
+                                        <img src="assets/images/review-3.png" alt="review-3">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-4.png" data-fancybox="gallery-reviews" data-caption="review-4">
+                                        <img src="assets/images/review-4.png" alt="review-4">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-5.png" data-fancybox="gallery-reviews" data-caption="review-5">
+                                        <img src="assets/images/review-5.png" alt="review-5">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-6.png" data-fancybox="gallery-reviews" data-caption="review-6">
+                                        <img src="assets/images/review-6.png" alt="review-6">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-7.png" data-fancybox="gallery-reviews" data-caption="review-7">
+                                        <img src="assets/images/review-7.png" alt="review-7">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-8.png" data-fancybox="gallery-reviews" data-caption="review-8">
+                                        <img src="assets/images/review-8.png" alt="review-8">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-9.png" data-fancybox="gallery-reviews" data-caption="review-9">
+                                        <img src="assets/images/review-9.png" alt="review-9">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-10.png" data-fancybox="gallery-reviews" data-caption="review-10">
+                                        <img src="assets/images/review-10.png" alt="review-10">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-11.png" data-fancybox="gallery-reviews" data-caption="review-11">
+                                        <img src="assets/images/review-11.png" alt="review-11">
+                                    </a>
+                                </div>
+                                <div class="review__image">
+                                    <a href="assets/images/review-12.png" data-fancybox="gallery-reviews" data-caption="review-12">
+                                        <img src="assets/images/review-12.png" alt="review-12">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 
     <footer>
-
+        <div class="container-inner">
+            <div class="footer">
+                <div class="footer__top d-flex">
+                    <div class="footer__col">
+                        <div class="footer__link"><a href="#">Правила проживания</a></div>
+                        <div class="footer__link"><a href="#">О недопущении действий коррупционного характера</a></div>
+                        <div class="footer__link"><a href="#">Закупки</a></div>
+                        <div class="footer__link"><a href="#">Согласие на обработку персональных данных</a></div>
+                        <div class="footer__link"><a href="#">Кодекс корпоративной этики</a></div>
+                        <div class="footer__link"><a href="#">Согласие на получение рассылки рекламно-информационных материалов</a></div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__link"><a href="#">Политика в отношении обработки персональных данных</a></div>
+                        <div class="footer__link"><a href="#">Политика в области качества</a></div>
+                        <div class="footer__link"><a href="#">Политика конфиденциальности</a></div>
+                        <div class="footer__link"><a href="#">Юридическая информация</a></div>
+                        <div class="footer__link"><a href="#">Карьера</a></div>
+                        <div class="footer__link"><a href="#">Карта сайта</a></div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__phone"><a href="tel:89113225151">8 911 322 51 51</a></div>
+                        <div class="footer__email"><a href="mailto:domrus51@yandex.ru">domrus51@yandex.ru</a></div>
+                        <div class="footer__address">РФ, Мурманская область, территория Автоподъезд к городу Апатиты, километр 15-й База отдыха № 4, д. 1</div>
+                        <div class="footer__gps">67.597728, 33.0836 <span>GPS координаты</span></div>
+                    </div>
+                </div>
+    
+                <div class="footer__bottom d-flex">
+                    <div class="footer__copyright">
+                        © Русь 2024, Официальный сайт
+                    </div>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link tg-link">
+                            <svg width="21" height="17">
+                                <use href="assets/images/svg/icons.svg#telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link whatsapp-link">
+                            <svg width="23" height="23">
+                                <use href="assets/images/svg/icons.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link ok-link">
+                            <svg width="25" height="25">
+                                <use href="assets/images/svg/icons.svg#odnoklassniki"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link vk-link">
+                            <svg width="23" height="21">
+                                <use href="assets/images/svg/icons.svg#vkontakte"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link youtube-link">
+                            <svg width="23" height="23">
+                                <use href="assets/images/svg/icons.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
