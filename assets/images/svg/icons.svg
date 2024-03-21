@@ -425,5 +425,34 @@
 <path d="M18.4665 19.2L16.6665 11L20.1665 7.5C21.6665 6 22.1665 4 21.6665 3C20.6665 2.5 18.6665 3 17.1665 4.5L13.6665 8L5.4665 6.2C4.9665 6.1 4.5665 6.3 4.3665 6.7L4.0665 7.2C3.8665 7.7 3.9665 8.2 4.3665 8.5L9.6665 12L7.6665 15H4.6665L3.6665 16L6.6665 18L8.6665 21L9.6665 20V17L12.6665 15L16.1665 20.3C16.4665 20.7 16.9665 20.8 17.4665 20.6L17.9665 20.4C18.3665 20.1 18.5665 19.7 18.4665 19.2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
 
+<symbol id="book-open-check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 3H2V18H9C10.7 18 12 19.3 12 21V7C12 4.8 10.2 3 8 3Z" stroke="#32A517" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16 12L18 14L22 10" stroke="#32A517" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22 6V3H16C13.8 3 12 4.8 12 7V21C12 19.3 13.3 18 15 18H22V15.7" stroke="#32A517" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="scroll-to-top" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.87445 23L22.9995 9.875L36.1245 23" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23 36.125L23 9.875" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="messages-square" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M26.75 17.375C26.75 18.3696 26.3549 19.3234 25.6516 20.0266C24.9484 20.7299 23.9946 21.125 23 21.125H11.75L4.25 28.625V8C4.25 5.9375 5.9375 4.25 8 4.25H23C23.9946 4.25 24.9484 4.64509 25.6516 5.34835C26.3549 6.05161 26.75 7.00544 26.75 8V17.375Z" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.25 17.375H38C38.9946 17.375 39.9484 17.7701 40.6516 18.4734C41.3549 19.1766 41.75 20.1304 41.75 21.125V41.75L34.25 34.25H23C22.0054 34.25 21.0516 33.8549 20.3484 33.1516C19.6451 32.4484 19.25 31.4946 19.25 30.5V28.625" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="phone-incoming" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 2.5V8.5H22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.5 2.5L16.5 8.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M22.5004 17.4201V20.4201C22.5016 20.6986 22.4445 20.9743 22.3329 21.2294C22.2214 21.4846 22.0577 21.7137 21.8525 21.902C21.6473 22.0902 21.405 22.2336 21.1412 22.3228C20.8773 22.412 20.5978 22.4452 20.3204 22.4201C17.2433 22.0857 14.2874 21.0342 11.6904 19.3501C9.27425 17.8148 7.22576 15.7663 5.69042 13.3501C4.0004 10.7413 2.94866 7.77109 2.62042 4.6801C2.59543 4.40356 2.6283 4.12486 2.71692 3.86172C2.80555 3.59859 2.94799 3.35679 3.13519 3.15172C3.32238 2.94665 3.55023 2.78281 3.80421 2.67062C4.0582 2.55843 4.33276 2.50036 4.61042 2.5001H7.61042C8.09573 2.49532 8.56621 2.66718 8.93418 2.98363C9.30215 3.30008 9.5425 3.73954 9.61042 4.2201C9.73704 5.18016 9.97187 6.12282 10.3104 7.0301C10.445 7.38802 10.4741 7.77701 10.3943 8.15098C10.3146 8.52494 10.1293 8.86821 9.86042 9.1401L8.59042 10.4101C10.014 12.9136 12.0869 14.9865 14.5904 16.4101L15.8604 15.1401C16.1323 14.8712 16.4756 14.6859 16.8495 14.6062C17.2235 14.5264 17.6125 14.5556 17.9704 14.6901C18.8777 15.0286 19.8204 15.2635 20.7804 15.3901C21.2662 15.4586 21.7098 15.7033 22.027 16.0776C22.3441 16.4519 22.5126 16.9297 22.5004 17.4201Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="burger-mobile" width="38" height="23" viewBox="0 0 38 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 1.5H36" stroke="#777777" stroke-width="3" stroke-linecap="round"/>
+<path d="M2 11.5H36" stroke="#777777" stroke-width="3" stroke-linecap="round"/>
+<path d="M2 21.5H36" stroke="#777777" stroke-width="3" stroke-linecap="round"/>
+</symbol>
+
+
 
 </svg>

@@ -18,6 +18,11 @@
     <header class="header-inner">
         <div class="container-inner">
             <div class="header">
+                <div class="header__burger">
+                    <svg width="38" height="23">
+                        <use href="assets/images/svg/icons.svg#burger-mobile"></use>
+                    </svg>
+                </div>
                 <div class="header__logo">
                     <a href="/"><img src="assets/images/svg/logo-inner.svg" alt="Отель Русь"></a>
                 </div>
@@ -40,7 +45,7 @@
                         </svg>
                         Услуги
                     </a>
-                    <a href="#" class="header__nav-item">
+                    <a href="attractions.html" class="header__nav-item">
                         <svg width="24" height="25">
                             <use href="assets/images/svg/icons.svg#landmark"></use>
                         </svg>
@@ -53,7 +58,12 @@
                         Ресторан и бар
                     </a>
                 </nav>
-                <div class="btn btn-green">Обратный звонок</div>
+                <div class="btn btn-green btn-header-phone">
+                    <span>Обратный звонок</span>
+                    <svg width="25" height="25">
+                        <use href="assets/images/svg/icons.svg#phone-incoming"></use>
+                    </svg>
+                </div>
             </div>
         </div>
     </header>
@@ -187,7 +197,7 @@
                 </a>
             </li>
             <li class="sidebar__links-wrapper">
-                <a class="sidebar__link" href="#">
+                <a class="sidebar__link" href="attractions.html">
                     <svg width="24" height="25">
                         <use href="assets/images/svg/icons.svg#sidebar-view"></use>
                     </svg>
@@ -302,7 +312,7 @@
                 </div>
             </div>
 
-            <div class="main-inner__images d-grid">
+            <div class="main-inner__images">
                 <div class="main-inner__image">
                     <a href="assets/images/room-img-1.png" data-fancybox="gallery" data-caption="room-img-1">
                         <img src="assets/images/room-img-1.png" alt="noimage">
@@ -447,18 +457,200 @@
                             </div>
                         </div>
     
-                        <div class="btn btn-green">Показать все удобства (12)</div>
+                        <div class="btn btn-green" data-bs-toggle="modal" data-bs-target="#amenititesModal">Показать все удобства (12)</div>
+                        <!-- Modal -->
+                        <div class="modal fade" id="amenititesModal" tabindex="-1" aria-labelledby="amenititesModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                <h5 class="modal-title" id="amenititesModalLabel">Все удобства</h5>
+                                <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="main-inner__amenities amenities-modal">
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#trees"></use>
+                                            </svg>
+                                            Вид на сад
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#waves"></use>
+                                            </svg>
+                                            Выход к озеру
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#baby"></use>
+                                            </svg>
+                                            Дети до 3-х лет бесплатно
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#dog"></use>
+                                            </svg>
+                                            Можно с питомцем
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#wifi"></use>
+                                            </svg>
+                                            Wi-Fi
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#bed-single"></use>
+                                            </svg>
+                                            Дополнительное место
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#key-round"></use>
+                                            </svg>
+                                            Замок на двери спальни
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#monitor-check"></use>
+                                            </svg>
+                                            Рабочая зона
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#hair-dryer"></use>
+                                            </svg>
+                                            Фен
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#arrow-down-up"></use>
+                                            </svg>
+                                            Лифт
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#parking-square"></use>
+                                            </svg>
+                                            Бесплатная парковка на территории
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#baggage-claim"></use>
+                                            </svg>
+                                            Багажная тумба
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#bath"></use>
+                                            </svg>
+                                            Собственная гидромассажная ванна
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#cooking-pot"></use>
+                                            </svg>
+                                            Кухня
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#trees"></use>
+                                            </svg>
+                                            Вид на сад
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#waves"></use>
+                                            </svg>
+                                            Выход к озеру
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#baby"></use>
+                                            </svg>
+                                            Дети до 3-х лет бесплатно
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#dog"></use>
+                                            </svg>
+                                            Можно с питомцем
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#wifi"></use>
+                                            </svg>
+                                            Wi-Fi
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#bed-single"></use>
+                                            </svg>
+                                            Дополнительное место
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#key-round"></use>
+                                            </svg>
+                                            Замок на двери спальни
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#monitor-check"></use>
+                                            </svg>
+                                            Рабочая зона
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#hair-dryer"></use>
+                                            </svg>
+                                            Фен
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#arrow-down-up"></use>
+                                            </svg>
+                                            Лифт
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#parking-square"></use>
+                                            </svg>
+                                            Бесплатная парковка на территории
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#baggage-claim"></use>
+                                            </svg>
+                                            Багажная тумба
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#bath"></use>
+                                            </svg>
+                                            Собственная гидромассажная ванна
+                                        </div>
+                                        <div class="main-inner__amenitie">
+                                            <svg width="24" height="24">
+                                                <use href="assets/images/svg/icons.svg#cooking-pot"></use>
+                                            </svg>
+                                            Кухня
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
                     </section>
-                    
 
-                    <section class="main-inner__description">
+                    <section class="main-inner__description section-inner">
                         <div class="section__title">Описание</div>
                         <p>Office ipsum you must be muted. Hear attached whistles not ourselves. Pole managing way re-inventing these cadence what's. Of one hiring good q1 the club. Able nobody other do info meaningful. Regroup vec social dogpile the were invite language both. Hammer don't scraps line zoom deliverables. Muted angel world commitment vendor. Feed developing hands standup canatics make create kimono place.
                             Stronger club day calculator keywords invite. At seat reality calculator impact. Your all finish level building. Cta invested long roll agile low plan. Territories boil playing not nail. Cross-pollination happenings ground level stop forward first. Hands anomalies room watches reference. Drive uat run items lift driver's. Cross if one submit build have market moving. Synergize shower viral key businesses diarize adoption. 30,000ft interim tentative shelf-ware stronger base crank able last. Where nail flesh marginalised any but dog management. They 30,000ft feature site marginalised wider fit blue eow accountable. Investigation power initiative gmail picture initiative competitors we've wiggle issues.
                             Silently now lift stakeholder emails paradigm no-brainer procrastinating looking. Policy deploy this underlying get an. It expectations cob criticality.</p>
                     </section>
 
-                    <section class="additional-services">
+                    <section class="additional-services section-inner">
                         <div class="section__title">Дополнительные услуги</div>
                         <div class="additional-services__wrapper">
                             <a href="#">
@@ -494,7 +686,7 @@
                         </div>
                     </section>
 
-                    <section class="landmarks">
+                    <section class="landmarks section-inner">
                         <div class="section__title">Ориентиры поблизости</div>
 
                         <div class="landmarks__wrapper">
@@ -659,22 +851,119 @@
                                 </div>
                             </div>
                         </div>
+                        <p>Все расстояния измерены по прямой. Фактическая дистанция может отличаться.</p>
                     </section>
 
-                    <section class="bonuses">
+                    <section class="bonuses section-inner">
                         <div class="section__title">Бонусы</div>
+
+                        <div class="bonuses__images">
+                            <div class="bonuses__image">
+                                <a href="#">
+                                    <img src="assets/images/bonuses-1.png" alt="bonuses-1">
+                                    <div class="bonuses__info">
+                                        <div class="bonuses__title">Получите 500 баллов</div>
+                                        <div class="bonuses__text">Получите 500 бонусных баллов, потратив 2500 рублей и более в ресторане</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="bonuses__image">
+                                <a href="#">
+                                    <img src="assets/images/bonuses-2.png" alt="bonuses-2">
+                                    <div class="bonuses__info">
+                                        <div class="bonuses__title">Семейный отдых</div>
+                                        <div class="bonuses__text">Запомните яркие моменты с семьей в Hilton St Petersburg ExpoForum!</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="bonuses__image">
+                                <a href="#">
+                                    <img src="assets/images/bonuses-3.png" alt="bonuses-3">
+                                    <div class="bonuses__info">
+                                        <div class="bonuses__title">Скидка 20% в день Рождения</div>
+                                        <div class="bonuses__text">Для именинников в день рождения и в течение одной недели после действует скидка 20% на все услуги и посещение спа-комплекса.</div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="bonuses__image">
+                                <a href="#">
+                                    <img src="assets/images/bonuses-4.png" alt="bonuses-4">
+                                    <div class="bonuses__info">
+                                        <div class="bonuses__title">Бронируйте беседки BBQ со скидкой 50%!</div>
+                                        <div class="bonuses__text">Собирайте своих близких и приезжайте к нам, в Horseka Resort, подышать свежим воздухом, полюбоваться зимним лесом, и отведать всеми любимые блюда на мангале!
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="bonuses__image">
+                                <a href="#">
+                                    <img src="assets/images/bonuses-5.png" alt="bonuses-5">
+                                    <div class="bonuses__info">
+                                        <div class="bonuses__title">Джаз-квартет в ресторане «GRIL'»</div>
+                                        <div class="bonuses__text">6 января 2024 в 19:00 состоится джаз-квартет в ресторане «GRIL'»</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="room-reviews section-inner">
+                        <div class="section__title">Отзывы о номере Стандарт</div>
+
+                        <div class="room-review" style="padding:30px;background-color:white;width:480px;height:955px;border-radius:30px;overflow:hidden;position:relative;"><iframe style="width:100%;height:100%;box-sizing:border-box" src="https://yandex.ru/maps-reviews-widget/224800399332?comments"></iframe><a href="https://yandex.ru/maps/org/titan_braun_kotkhibin/224800399332/" target="_blank" style="box-sizing:border-box;text-decoration:none;color:#b3b3b3;font-size:10px;font-family:YS Text,sans-serif;padding:0 20px;position:absolute;bottom:8px;width:100%;text-align:center;left:0;overflow:hidden;text-overflow:ellipsis;display:block;max-height:14px;white-space:nowrap;padding:0 16px;box-sizing:border-box">Титан Браун КотХибин на карте Мурманской области — Яндекс Карты</a></div>
+                    </section>
+
+                    <section class="important-info section-inner">
+                        <div class="section__title">Важная информация</div>
+
+                        <div class="important-info__wrapper d-flex">
+                            <div class="important-info__col">
+                                <div class="important-info__title">Правила отмены бронирования и возврата денег</div>
+                                <ul>
+                                    <li>Бесплатная отмена до 12:00 7 янв.</li>
+                                    <li>Ознакомьтесь с правилами отмены. Они будут действовать, даже если вы отмените бронирование из-за коронавируса.</li>
+                                </ul>
+                            </div>
+                            <div class="important-info__col">
+                                <div class="important-info__title">Политика по размещению с детьми и домашними животными</div>
+                                <ul class="important-info__more">
+                                    <li>Не подходит для детей и младенцев</li>
+                                    <li>В доме живут питомцы</li>
+                                    <li>Не подходит для детей и младенцев</li>
+                                    <li>В доме живут питомцы</li>
+                                </ul>
+                                <button class="btn-reset important-info__btn" type="text">Показать еще</button>
+                            </div>
+                            <div class="important-info__col">
+                                <div class="important-info__title">Время регистрации и выселения</div>
+                                <ul class="important-info__more">
+                                    <li>Время прибытия: с 12:00 до 18:00</li>
+                                    <li>Выезд до 12:00</li>
+                                    <li>Время прибытия: с 12:00 до 18:00</li>
+                                    <li>Выезд до 12:00</li>
+                                </ul>
+                                <button class="btn-reset important-info__btn" type="text">Показать еще</button>
+                            </div>
+                        </div>
                     </section>
                 </div>
                 <div class="main-inner__right">
                     <div class="booking-rooms__wrapper">
                         <div class="booking-rooms">Бронирование номеров</div>
-                        <div class="rools-living"></div>
+                        <div class="rools-living">
+                            <a href="#">
+                                Правила проживания
+                                <span>
+                                    <svg width="24" height="25">
+                                        <use href="assets/images/svg/icons.svg#book-open-check"></use>
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
 
         <section>
             <div class="stocks">
@@ -899,6 +1188,22 @@
             </div>
         </div>
     </footer>
+
+    <div class="fixed-buttons__wrapper">
+        <div class="btn btn-green booking-modal" data-bs-toggle="modal" data-bs-target="#bookingModal">Забронировать</div>
+
+        <button class="btn-reset fixed-buttons" id="scroll-to-top">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#scroll-to-top"></use>
+            </svg>
+        </button>
+    
+        <button class="btn-reset fixed-buttons" id="messages-square">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#messages-square"></use>
+            </svg>
+        </button>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script async src="https://app2.weatherwidget.org/js/?id=ww_f5ad4c79c848e"></script>

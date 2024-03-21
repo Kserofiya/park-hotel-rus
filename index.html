@@ -18,6 +18,11 @@
     <header>
         <div class="container-inner">
             <div class="header">
+                <div class="header__burger">
+                    <svg width="38" height="23">
+                        <use href="assets/images/svg/icons.svg#burger-mobile"></use>
+                    </svg>
+                </div>
                 <div class="header__logo">
                     <a href="/"><img src="assets/images/svg/logo.svg" alt="Отель Русь"></a>
                 </div>
@@ -40,7 +45,7 @@
                         </svg>
                         Услуги
                     </a>
-                    <a href="#" class="header__nav-item">
+                    <a href="attractions.html" class="header__nav-item">
                         <svg width="24" height="25">
                             <use href="assets/images/svg/icons.svg#landmark"></use>
                         </svg>
@@ -53,7 +58,12 @@
                         Ресторан и бар
                     </a>
                 </nav>
-                <div class="btn btn-green">Обратный звонок</div>
+                <div class="btn btn-green btn-header-phone">
+                    <span>Обратный звонок</span>
+                    <svg width="25" height="25">
+                        <use href="assets/images/svg/icons.svg#phone-incoming"></use>
+                    </svg>
+                </div>
             </div>
         </div>
     </header>
@@ -187,7 +197,7 @@
                 </a>
             </li>
             <li class="sidebar__links-wrapper">
-                <a class="sidebar__link" href="#">
+                <a class="sidebar__link" href="attractions.html">
                     <svg width="24" height="25">
                         <use href="assets/images/svg/icons.svg#sidebar-view"></use>
                     </svg>
@@ -468,7 +478,7 @@
 
         <section>
             <div class="attractions">
-                <div class="section__title"><a href="#">Достопримечательности</a></div>
+                <div class="section__title"><a href="attractions.html">Достопримечательности</a></div>
                 <!-- Swiper -->
                 <div class="swiper attractions-swiper horizontal-slider">
                     <div class="swiper-wrapper">
@@ -1386,6 +1396,22 @@
             </div>
         </div>
     </footer>
+
+    <div class="fixed-buttons__wrapper">
+        <div class="btn btn-green booking-modal" data-bs-toggle="modal" data-bs-target="#bookingModal">Забронировать</div>
+
+        <button class="btn-reset fixed-buttons" id="scroll-to-top">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#scroll-to-top"></use>
+            </svg>
+        </button>
+    
+        <button class="btn-reset fixed-buttons" id="messages-square">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#messages-square"></use>
+            </svg>
+        </button>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script async src="https://app2.weatherwidget.org/js/?id=ww_f5ad4c79c848e"></script>
