@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <script src="https://api-maps.yandex.ru/2.1/?apikey=8dafc533-48c9-4baf-bffa-6020dad4aaa3&lang=ru_RU"></script>
-    <link rel="stylesheet" href="assets/css/style.css?v=4">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
     <title>Достопримечательности</title>
 </head>
 <body>
@@ -46,7 +46,7 @@
                         </svg>
                         Услуги
                     </a>
-                    <a href="#" class="header__nav-item">
+                    <a href="#" class="header__nav-item active">
                         <svg width="24" height="25">
                             <use href="assets/images/svg/icons.svg#landmark"></use>
                         </svg>
@@ -319,890 +319,1004 @@
                             </div>
                             <div class="input-group">
                                 <div class="input-group__title">Количество человек</div>
+                                <div class="custom-checkboxes">
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="one" name="one" value="1">
+                                        <label for="one">1</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="two" name="two" value="2">
+                                        <label for="two">2</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="three-and-more" name="three-and-more" value="3 и больше" checked>
+                                        <label for="three-and-more">3 и больше</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="input-group">
                                 <div class="input-group__title">Продолжительность</div>
+                                <div class="custom-checkboxes">
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="one-day" name="one-day" value="1 день">
+                                        <label for="one-day">1 день</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="two-days" name="two-days" value="2 дня">
+                                        <label for="two-days">2 дня</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="three-days-and-more" name="three-days-and-more" value="3 дня и больше" checked>
+                                        <label for="three-days-and-more">3 дня и больше</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="input-group">
                                 <div class="input-group__title">Тип активности</div>
+                                <div class="custom-checkboxes">
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="gastro-vino" name="gastro-vino" value="Гастро-вино">
+                                        <label for="gastro-vino">Гастро-вино</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="pohody" name="pohody" value="Походы и экспедиции">
+                                        <label for="pohody">Походы и экспедиции</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="family-rest" name="family-rest" value="Семейный отдых" checked>
+                                        <label for="family-rest">Семейный отдых</label>
+                                    </div>
+                                </div>
                             </div>
                             <div class="input-group">
                                 <div class="input-group__title">Для кого</div>
+                                <div class="custom-checkboxes">
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="individual-rest" name="individual-rest" value="Индивидуальный отдых">
+                                        <label for="individual-rest">Индивидуальный отдых</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="family-rest-2" name="family-rest-2" value="Семейный отдых">
+                                        <label for="family-rest-2">Семейный отдых</label>
+                                    </div>
+                                    <div class="custom-checkbox">
+                                        <input type="checkbox" id="rest-with-children" name="rest-with-children" value="Отдых с детьми" checked>
+                                        <label for="rest-with-children">Отдых с детьми</label>
+                                    </div>
+                                </div>
                             </div>
 
                             <button type="submit" class="btn btn-green btn-dark-green btn-reset">Сбросить фильтр</button>
                         </form>
                     </div>
+                    <div class="btn btn-green btn-dark-green btn-filters-modal" data-bs-toggle="modal" data-bs-target="#filtersModal">Фильтры</div>
+                    <!-- Modal -->
+                    <div class="modal fade" id="filtersModal" tabindex="-1" aria-labelledby="filtersModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title" id="filtersModalLabel">Фильтры</h5>
+                            <button type="button" class="btn-close modal-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                
+                            </div>
+                        </div>
+                        </div>
+                    </div>
                     <div class="attractions-page__content">
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Зоопарк</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Мастерская настроения</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
+                        <div class="attractions-page__items">
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Зоопарк</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="attractions_detail.html"></a>
                             </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Весенние каникулы</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Мастерская настроения</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
                                     </div>
                                 </div>
+                                <a href="#"></a>
                             </div>
-                            <a href="#"></a>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Весенние каникулы</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">За зелеными горами</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Зоопарк</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Мастерская настроения</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Весенние каникулы</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">За зелеными горами</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Зоопарк</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Мастерская настроения</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Весенние каникулы</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">За зелеными горами</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Зоопарк</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Мастерская настроения</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Весенние каникулы</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">За зелеными горами</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Зоопарк</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Мастерская настроения</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Весенние каникулы</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">За зелеными горами</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Зоопарк</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Мастерская настроения</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">Весенние каникулы</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#wallet"></use>
+                                            </svg>
+                                            от 5000 руб.
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
+                            
+                            <div class="attractions-page__item">
+                                <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
+                                <div class="attractions__wrapper">
+                                    <div class="horizontal-slider__title">За зелеными горами</div>
+                                    <div class="attractions__specifications">
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#route"></use>
+                                            </svg>
+                                            5 км
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#sun"></use>
+                                            </svg>
+                                            Летний отдых
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#users"></use>
+                                            </svg>
+                                            2-4 чел.
+                                        </div>
+                                        <div class="attractions__specification">
+                                            <svg width="20" height="20">
+                                                <use href="assets/images/svg/icons.svg#calendar"></use>
+                                            </svg>
+                                            от 5 дней
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="#"></a>
+                            </div>
                         </div>
                         
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">За зелеными горами</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
+                        <div class="attractions-page__navigation">
+                            <a href="#" class="btn btn-green btn-navigation">Посмотреть все</a>
+
+                            <ul class="navigation">
+                                <li>
+                                    <a href="#">
+                                        <svg width="6" height="12">
+                                            <use href="assets/images/svg/icons.svg#navigation-left"></use>
                                         </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
+                                    </a>
+                                </li>
+                                <li><a href="#" class="active"><span>1</span></a></li>
+                                <li><a href="#"><span>2</span></a></li>
+                                <li><a href="#"><span>3</span></a></li>
+                                <li><a href="#"><span>4</span> </a></li>
+                                <li>
+                                    <a href="#">
+                                        <svg width="6" height="12">
+                                            <use href="assets/images/svg/icons.svg#navigation-right"></use>
                                         </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Зоопарк</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
+
+                        <div class="attractions-page__not-found attractions-page-not-found">
+                            <div class="section__title">Ничего не найдено</div>
+                            <div class="attractions-page-not-found__wrapper">
+                                <div class="attractions-page-not-found__svg">
+                                    <svg width="66" height="67">
+                                        <use href="assets/images/svg/icons.svg#image-off"></use>
+                                    </svg>
+                                </div>
+                                <div class="attractions-page-not-found__text">
+                                    <p>К сожалению, в нашем каталоге нет товаров, подходящих под выбранные фильтры.
+                                        <br>
+                                    Попробуйте поменять или <a class="reset-filters">очистить фильтры</a>, и товары обязательно найдутся.</p>
                                 </div>
                             </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Мастерская настроения</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Весенние каникулы</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">За зелеными горами</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Зоопарк</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Мастерская настроения</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Весенние каникулы</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">За зелеными горами</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Зоопарк</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Мастерская настроения</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Весенние каникулы</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">За зелеными горами</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Зоопарк</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Мастерская настроения</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Весенние каникулы</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">За зелеными горами</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-3.png" alt="attractions-slide-3">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Зоопарк</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-4.png" alt="attractions-slide-4">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Мастерская настроения</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-2.png" alt="attractions-slide-2">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">Весенние каникулы</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#wallet"></use>
-                                        </svg>
-                                        от 5000 руб.
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
-                        </div>
-                        
-                        <div class="attractions-page__item">
-                            <img src="assets/images/attractions-slide-1.png" alt="attractions-slide-1">
-                            <div class="attractions__wrapper">
-                                <div class="horizontal-slider__title">За зелеными горами</div>
-                                <div class="attractions__specifications">
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#route"></use>
-                                        </svg>
-                                        5 км
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#sun"></use>
-                                        </svg>
-                                        Летний отдых
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#users"></use>
-                                        </svg>
-                                        2-4 чел.
-                                    </div>
-                                    <div class="attractions__specification">
-                                        <svg width="20" height="20">
-                                            <use href="assets/images/svg/icons.svg#calendar"></use>
-                                        </svg>
-                                        от 5 дней
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="#"></a>
                         </div>
                     </div>
                 </div>
@@ -1298,6 +1412,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-    <script src="assets/js/script.js?v=4"></script>
+    <script src="assets/js/script.js?v=6"></script>
 </body>
 </html>

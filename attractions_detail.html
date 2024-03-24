@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/svg/logo-inner.svg" type="image/svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8dafc533-48c9-4baf-bffa-6020dad4aaa3&lang=ru_RU"></script>
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
+    <title>Достопримечательности - Кольский полуостров</title>
+</head>
+<body>
+    <header class="header-inner">
+        <div class="container-inner">
+            <div class="header">
+                <div class="header__burger">
+                    <svg width="38" height="23">
+                        <use href="assets/images/svg/icons.svg#burger-mobile"></use>
+                    </svg>
+                </div>
+                <div class="header__logo">
+                    <a href="/"><img src="assets/images/svg/logo-inner.svg" alt="Отель Русь"></a>
+                </div>
+                <nav class="header__nav">
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#clapperboard"></use>
+                        </svg>
+                        Афиша
+                    </a>
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#bed-double"></use>
+                        </svg>
+                        Размещение
+                    </a>
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#sparkles"></use>
+                        </svg>
+                        Услуги
+                    </a>
+                    <a href="#" class="header__nav-item active">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#landmark"></use>
+                        </svg>
+                        Достопримечательности
+                    </a>
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#concierge-bell"></use>
+                        </svg>
+                        Ресторан и бар
+                    </a>
+                </nav>
+                <div class="btn btn-green btn-header-phone">
+                    <span>Обратный звонок</span>
+                    <svg width="25" height="25">
+                        <use href="assets/images/svg/icons.svg#phone-incoming"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar-inner">
+        <ul>
+            <li class="sidebar__links-wrapper">
+                <div class="sidebar__link js-big-menu-btn button">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#burger"></use>
+                    </svg>
+                </div>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#home"></use>
+                    </svg>
+                    <div class="sidebar__text">На главную</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link sidebar__link-parent" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#bedroom"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Размещение
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="sidebar__submenu">
+                    <li>
+                        <a class="sidebar__link" href="#">
+                            <div class="sidebar__text">
+                                Номера
+                                <svg width="24" height="25">
+                                    <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="sidebar__submenu">
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="#">Люкс</a></li>
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="#">Люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Президентский люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Президентский люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Президентский люкс</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="sidebar__link" href="#">
+                            <div class="sidebar__text">
+                                Виллы
+                                <svg width="24" height="25">
+                                    <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar__link" href="#">
+                            <div class="sidebar__text">
+                                Коттеджи
+                                <svg width="24" height="25">
+                                    <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-address"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Как добраться
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-map"></use>
+                    </svg>
+                    <div class="sidebar__text">Карта курорта</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-about"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        О нас
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-afisha"></use>
+                    </svg>
+                    <div class="sidebar__text">Афиша</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-bar"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Ресторан и бар
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="attractions.html">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-view"></use>
+                    </svg>
+                    <div class="sidebar__text">Достопримечательности</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-spa"></use>
+                    </svg>
+                    <div class="sidebar__text">Спа</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-activity"></use>
+                    </svg>
+                    <div class="sidebar__text">Активный отдых</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-kids"></use>
+                    </svg>
+                    <div class="sidebar__text">Для детей</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-organization"></use>
+                    </svg>
+                    <div class="sidebar__text">Организация экскурсий</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-conference"></use>
+                    </svg>
+                    <div class="sidebar__text">Конференции</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-spec"></use>
+                    </svg>
+                    <div class="sidebar__text">Спецпредложения</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-news"></use>
+                    </svg>
+                    <div class="sidebar__text">Новости</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-weather"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Погода
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="sidebar__submenu submenu__weather">
+                    <li>
+                        <div id="ww_f5ad4c79c848e" v='1.3' loc='auto' a='{"t":"horizontal","lang":"ru","ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+                            <a href="https://weatherwidget.org/ru/" id="ww_f5ad4c79c848e_u" target="_blank">Погодный информер погоды для сайта</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <main class="main-inner">
+        <div class="container-inner">
+            <div class="breadcrumbs">
+                <ul>
+                    <li>
+                        <a href="/">Главная</a>
+                        <svg width="20" height="20">
+                            <use href="assets/images/svg/icons.svg#breadcrumbs-arrow"></use>
+                        </svg>
+                    </li>
+                    <li>
+                        <a href="attractions.html">Достопримечательности</a>
+                        <svg width="20" height="20">
+                            <use href="assets/images/svg/icons.svg#breadcrumbs-arrow"></use>
+                        </svg>
+                    </li>
+                    <li>Кольский полуостров</li>
+                </ul>
+            </div>
+            <h1 class="main-inner__main-title">Кольский полуостров</h1>
+
+            <div class="main-inner__images">
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-1.png" data-fancybox="gallery" data-caption="attractions-detail-img-1">
+                        <img src="assets/images/attractions-detail-img-1.png" alt="attractions-detail-img-1">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-2.png" data-fancybox="gallery" data-caption="attractions-detail-img-2">
+                        <img src="assets/images/attractions-detail-img-2.png" alt="room-img-2">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-3.png" data-fancybox="gallery" data-caption="attractions-detail-img-3">
+                        <img src="assets/images/attractions-detail-img-3.png" alt="room-img-3">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-4.png" data-fancybox="gallery" data-caption="attractions-detail-img-4">
+                        <img src="assets/images/attractions-detail-img-4.png" alt="attractions-detail-img-4">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-5.png" data-fancybox="gallery" data-caption="attractions-detail-img-5">
+                        <img src="assets/images/attractions-detail-img-5.png" alt="room-img-5">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-6.png" data-fancybox="gallery" data-caption="attractions-detail-img-6">
+                        <img src="assets/images/attractions-detail-img-6.png" alt="attractions-detail-img-6">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-7.png" data-fancybox="gallery" data-caption="attractions-detail-img-7">
+                        <img src="assets/images/attractions-detail-img-7.png" alt="attractions-detail-img-7">
+                        <span class="main-inner__image-text">+20 фото</span>
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-6.png" data-fancybox="gallery" data-caption="attractions-detail-img-6">
+                        <img src="assets/images/attractions-detail-img-6.png" alt="attractions-detail-img-6">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-5.png" data-fancybox="gallery" data-caption="attractions-detail-img-5">
+                        <img src="assets/images/attractions-detail-img-5.png" alt="attractions-detail-img-5">
+                    </a>
+                </div>
+                <div class="main-inner__image">
+                    <a href="assets/images/attractions-detail-img-4.png" data-fancybox="gallery" data-caption="attractions-detail-img-4">
+                        <img src="assets/images/attractions-detail-img-4.png" alt="attractions-detail-img-4">
+                    </a>
+                </div>
+            </div>
+
+            <section class="main-inner__description">
+                <div class="section__title">Описание</div>
+                <p>Office ipsum you must be muted. Hear attached whistles not ourselves. Pole managing way re-inventing these cadence what's. Of one hiring good q1 the club. Able nobody other do info meaningful. Regroup vec social dogpile the were invite language both. Hammer don't scraps line zoom deliverables. Muted angel world commitment vendor. Feed developing hands standup canatics make create kimono place.
+                    Stronger club day calculator keywords invite. At seat reality calculator impact. Your all finish level building. Cta invested long roll agile low plan. Territories boil playing not nail. Cross-pollination happenings ground level stop forward first. Hands anomalies room watches reference. Drive uat run items lift driver's. Cross if one submit build have market moving. Synergize shower viral key businesses diarize adoption. 30,000ft interim tentative shelf-ware stronger base crank able last. Where nail flesh marginalised any but dog management. They 30,000ft feature site marginalised wider fit blue eow accountable. Investigation power initiative gmail picture initiative competitors we've wiggle issues.
+                    Silently now lift stakeholder emails paradigm no-brainer procrastinating looking. Policy deploy this underlying get an. It expectations cob criticality.</p>
+            </section>
+
+            <section>
+                <div class="attractions-detail__wrapper">
+                    <div class="attractions-detail__historical">
+                        <div class="attractions-detail__title">
+                            <svg width="24" height="24">
+                                <use href="assets/images/svg/icons.svg#globe-2"></use>
+                            </svg>
+                            Историческая справка
+                        </div>
+
+                        <p>Office ipsum you must be muted. Hear attached whistles not ourselves. Pole managing way re-inventing these cadence what's. Of one hiring good q1 the club. Able nobody other do info meaningful. Regroup vec social dogpile the were invite language both. Hammer don't scraps line zoom deliverables. Muted angel world commitment vendor. Feed developing hands standup canatics make create kimono place.
+                            Stronger club day calculator keywords invite. At seat reality calculator impact. Your all finish level building. Cta invested long roll agile low plan. Territories boil playing not nail. Cross-pollination happenings ground level stop forward first. Hands anomalies room watches reference. Drive uat run items lift driver's. Cross if one submit build have market moving. Synergize shower viral key businesses diarize adoption. 30,000ft interim tentative shelf-ware stronger base crank able last. Where nail flesh marginalised any but dog management. They 30,000ft feature site marginalised wider fit blue eow accountable. Investigation power initiative gmail picture initiative competitors we've wiggle issues.
+                            Silently now lift stakeholder emails paradigm no-brainer procrastinating looking. Policy deploy this underlying get an. It expectations cob criticality.</p>
+
+                    </div>
+                    <div class="attractions-detail__features">
+                        <div class="attractions-detail__title">
+                            <svg width="24" height="25">
+                                <use href="assets/images/svg/icons.svg#sparkles"></use>
+                            </svg>
+                            Особенности
+                        </div>
+
+                        <p>Office ipsum you must be muted. Hear attached whistles not ourselves. Pole managing way re-inventing these cadence what's. Of one hiring good q1 the club. Able nobody other do info meaningful. Regroup vec social dogpile the were invite language both. Hammer don't scraps line zoom deliverables. Muted angel world commitment vendor. Feed developing hands standup canatics make create kimono place.
+                            Stronger club day calculator keywords invite. At seat reality calculator impact. Your all finish level building. Cta invested long roll agile low plan. Territories boil playing not nail. Cross-pollination happenings ground level stop forward first. Hands anomalies room watches reference. Drive uat run items lift driver's. Cross if one submit build have market moving. Synergize shower viral key businesses diarize adoption. 30,000ft interim tentative shelf-ware stronger base crank able last. Where nail flesh marginalised any but dog management. They 30,000ft feature site marginalised wider fit blue eow accountable. Investigation power initiative gmail picture initiative competitors we've wiggle issues.
+                            Silently now lift stakeholder emails paradigm no-brainer procrastinating looking. Policy deploy this underlying get an. It expectations cob criticality.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-inner">
+                <div class="attraction-routes__wrapper">
+                    <div class="section__title">Маршруты и экскурсии</div>
+                    <a href="#" class="btn btn-green">Все экскурсии</a>
+                </div>
+                <div class="attractions-detail__title">
+                    <svg width="24" height="24">
+                        <use href="assets/images/svg/icons.svg#route"></use>
+                    </svg>
+                    Организация экскурсий
+                </div>
+                <div class="attractions-detail__routes">
+                    <div class="attractions-detail__route attractions-detail-route">
+                        <a href="#" class="attraction-detail__route">
+                            <div class="attractions-detail-route__img"><img src="assets/images/attractions-detail-img-8.png" alt="attractions-detail-img-8"></div>
+                            <div class="attractions-detail-route__title">Легенды и тайны Кольского полуострова</div>
+                        </a>
+                    </div>
+                    <div class="attractions-detail__route attractions-detail-route">
+                        <a href="#" class="attraction-detail__route">
+                            <div class="attractions-detail-route__img"><img src="assets/images/attractions-detail-img-6.png" alt="attractions-detail-img-6"></div>
+                            <div class="attractions-detail-route__title">По следам великих открытий</div>
+                        </a>
+                    </div>
+                    <div class="attractions-detail__route attractions-detail-route">
+                        <a href="#" class="attraction-detail__route">
+                            <div class="attractions-detail-route__img"><img src="assets/images/attractions-detail-img-9.png" alt="attractions-detail-img-9"></div>
+                            <div class="attractions-detail-route__title">Очарование северной природы</div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div class="attractions-detail__on-map">
+                    <div class="attractions-detail__map">
+                        <div class="attractions-detail__title">
+                            <svg width="24" height="24">
+                                <use href="assets/images/svg/icons.svg#route"></use>
+                            </svg>
+                            Кольский полуостров на карте
+                        </div>
+                        <div id="attractions-detail-map" style="width: 100%; height: 540px">
+                            <div class="attractions-detail-map__title">Кольский полуостров</div>
+                        </div>
+                    </div>
+                    <div class="accordion" id="accordionHowToGet">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingAuto">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseAuto" aria-expanded="false" aria-controls="collapseAuto">
+                                Автомобиль
+                            </button>
+                            </h2>
+                            <div id="collapseAuto" class="accordion-collapse collapse" aria-labelledby="headingAuto" data-bs-parent="#accordionHowToGet">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <b>Яндекс.Такси</b>
+                                        <br>
+                                        200 р до Северного (городского) склона
+                                    </li>
+                                    <li>
+                                        <b>Такси Фламинго</b>
+                                        <br>
+                                        (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTaxi">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTaxi" aria-expanded="true" aria-controls="collapseTaxi">
+                                Такси
+                            </button>
+                            </h2>
+                            <div id="collapseTaxi" class="accordion-collapse collapse show" aria-labelledby="headingTaxi" data-bs-parent="#accordionHowToGet">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <b>Яндекс.Такси</b>
+                                        <br>
+                                        200 р до Северного (городского) склона
+                                    </li>
+                                    <li>
+                                        <b>Такси Фламинго</b>
+                                        <br>
+                                        (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                    </li>
+                                    <li>
+                                        <b>Такси Апельсин</b>
+                                        <br>
+                                        До склона от нас 200 р без снаряжения, 250 р со снаряжением <a href="tel:89118059000">8-911-805-9000</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingPublicTransport">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePublicTransport" aria-expanded="false" aria-controls="collapsePublicTransport">
+                                Общественный транспорт
+                            </button>
+                            </h2>
+                            <div id="collapsePublicTransport" class="accordion-collapse collapse" aria-labelledby="headingPublicTransport" data-bs-parent="#accordionHowToGet">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <b>Такси Фламинго</b>
+                                        <br>
+                                        (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                    </li>
+                                    <li>
+                                        <b>Такси Апельсин</b>
+                                        <br>
+                                        До склона от нас 200 р без снаряжения, 250 р со снаряжением <a href="tel:89118059000">8-911-805-9000</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingPlane">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePlane" aria-expanded="false" aria-controls="collapsePlane">
+                                Самолет
+                            </button>
+                            </h2>
+                            <div id="collapsePlane" class="accordion-collapse collapse" aria-labelledby="headingPlane" data-bs-parent="#accordionHowToGet">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <b>Яндекс.Такси</b>
+                                        <br>
+                                        200 р до Северного (городского) склона
+                                    </li>
+                                    <li>
+                                        <b>Такси Фламинго</b>
+                                        <br>
+                                        (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                    </li>
+                                    <li>
+                                        <b>Такси Апельсин</b>
+                                        <br>
+                                        До склона от нас 200 р без снаряжения, 250 р со снаряжением <a href="tel:89118059000">8-911-805-9000</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTrain">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTrain" aria-expanded="false" aria-controls="collapseTrain">
+                                Поезд
+                            </button>
+                            </h2>
+                            <div id="collapseTrain" class="accordion-collapse collapse" aria-labelledby="headingTrain" data-bs-parent="#accordionHowToGet">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>
+                                        <b>Яндекс.Такси</b>
+                                        <br>
+                                        200 р до Северного (городского) склона
+                                    </li>
+                                    <li>
+                                        <b>Такси Фламинго</b>
+                                        <br>
+                                        (Кировск-Апатиты-Мурманск) <a href="tel:89210358830">8-921-035-88-30</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-inner">
+                <div class="section__title">Рекомендации от местных жителей</div>
+                <div class="news__items d-grid">
+                    <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/recommendations-1.png" alt="recommendations-1"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Рыбалка в реках и северных морях</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/recommendations-2.png" alt="recommendations-2"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Спуск по горным рекам</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/recommendations-3.png" alt="recommendations-3"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Фотоохота на китов в Баренцевом море</div>
+                            </div>
+                        </a>
+                    </div>
+                   <div class="news__item">
+                    <a href="#">
+                        <div class="news__img"><img src="assets/images/recommendations-4.png" alt="recommendations-4"></div>
+                        <div class="news__wrapper-info">
+                            <div class="news__title">Фридайвинг и дайвинг</div>
+                        </div>
+                    </a>
+                   </div>
+                    <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/recommendations-5.png" alt="recommendations-5"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Мурманск - на севере жить: маршрут одного дня</div>
+                            </div>
+                        </a>
+                    </div>
+                   <div class="news__item">
+                    <a href="#">
+                        <div class="news__img"><img src="assets/images/recommendations-6.png" alt="recommendations-6"></div>
+                        <div class="news__wrapper-info">
+                            <div class="news__title">Кировск — маршрут одного дня: подъем на гондоле на вершину Айкуайвенчорр</div>
+                        </div>
+                    </a>
+                   </div>
+                    <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/recommendations-7.png" alt="recommendations-7"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Териберка на краю земли — экскурсия одного дня</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-inner">
+                <div class="section__title">Популярные места</div>
+                <div class="news__items news__items--fourth">
+                   <div class="news__item">
+                    <a href="#">
+                        <div class="news__img"><img src="assets/images/recommendations-4.png" alt="recommendations-4"></div>
+                        <div class="news__wrapper-info">
+                            <div class="news__title">Фридайвинг и дайвинг</div>
+                        </div>
+                    </a>
+                   </div>
+                    <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/recommendations-5.png" alt="recommendations-5"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Мурманск - на севере жить: маршрут одного дня</div>
+                            </div>
+                        </a>
+                    </div>
+                   <div class="news__item">
+                    <a href="#">
+                        <div class="news__img"><img src="assets/images/recommendations-6.png" alt="recommendations-6"></div>
+                        <div class="news__wrapper-info">
+                            <div class="news__title">Кировск — маршрут одного дня: подъем на гондоле на вершину Айкуайвенчорр</div>
+                        </div>
+                    </a>
+                   </div>
+                    <div class="news__item">
+                        <a href="#">
+                            <div class="news__img"><img src="assets/images/recommendations-7.png" alt="recommendations-7"></div>
+                            <div class="news__wrapper-info">
+                                <div class="news__title">Териберка на краю земли — экскурсия одного дня</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section-inner">
+                <div class="section__title">Контактная информация</div>
+
+                <div class="attractions-detail__contacts">
+                    <div class="attractions-detail__contact">
+                        <a href="tel:88005505272">
+                            <svg width="30" height="31">
+                                <use href="assets/images/svg/icons.svg#phone"></use>
+                            </svg>
+                            8 800 550 52 72
+                        </a>
+                        <div class="footer__social-links">
+                            <a href="#" class="footer__social-link tg-link">
+                                <svg width="21" height="17">
+                                    <use href="assets/images/svg/icons.svg#telegram"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link whatsapp-link">
+                                <svg width="23" height="23">
+                                    <use href="assets/images/svg/icons.svg#whatsapp"></use>
+                                </svg>
+                            </a>
+                            <a href="#" class="footer__social-link vk-link">
+                                <svg width="23" height="21">
+                                    <use href="assets/images/svg/icons.svg#vkontakte"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="attractions-detail__contact">
+                        <a href="mailto:info@rus.ru">
+                            <svg width="31" height="31">
+                                <use href="assets/images/svg/icons.svg#mail"></use>
+                            </svg>
+                            info@rus.ru
+                        </a>
+                    </div>
+                </div>
+
+            </section>
+            
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <div class="container-inner">
+            <div class="footer">
+                <div class="footer__top d-flex">
+                    <div class="footer__col">
+                        <div class="footer__link"><a href="#">Правила проживания</a></div>
+                        <div class="footer__link"><a href="#">О недопущении действий коррупционного характера</a></div>
+                        <div class="footer__link"><a href="#">Закупки</a></div>
+                        <div class="footer__link"><a href="#">Согласие на обработку персональных данных</a></div>
+                        <div class="footer__link"><a href="#">Кодекс корпоративной этики</a></div>
+                        <div class="footer__link"><a href="#">Согласие на получение рассылки рекламно-информационных материалов</a></div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__link"><a href="#">Политика в отношении обработки персональных данных</a></div>
+                        <div class="footer__link"><a href="#">Политика в области качества</a></div>
+                        <div class="footer__link"><a href="#">Политика конфиденциальности</a></div>
+                        <div class="footer__link"><a href="#">Юридическая информация</a></div>
+                        <div class="footer__link"><a href="#">Карьера</a></div>
+                        <div class="footer__link"><a href="#">Карта сайта</a></div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__phone"><a href="tel:89113225151">8 911 322 51 51</a></div>
+                        <div class="footer__email"><a href="mailto:domrus51@yandex.ru">domrus51@yandex.ru</a></div>
+                        <div class="footer__address">РФ, Мурманская область, территория Автоподъезд к городу Апатиты, километр 15-й База отдыха № 4, д. 1</div>
+                        <div class="footer__gps">67.597728, 33.0836 <span>GPS координаты</span></div>
+                    </div>
+                </div>
+    
+                <div class="footer__bottom d-flex">
+                    <div class="footer__copyright">
+                        © Русь 2024, Официальный сайт
+                    </div>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link tg-link">
+                            <svg width="21" height="17">
+                                <use href="assets/images/svg/icons.svg#telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link whatsapp-link">
+                            <svg width="23" height="23">
+                                <use href="assets/images/svg/icons.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link ok-link">
+                            <svg width="25" height="25">
+                                <use href="assets/images/svg/icons.svg#odnoklassniki"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link vk-link">
+                            <svg width="23" height="21">
+                                <use href="assets/images/svg/icons.svg#vkontakte"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link youtube-link">
+                            <svg width="23" height="23">
+                                <use href="assets/images/svg/icons.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed-buttons__wrapper">
+        <div class="btn btn-green booking-modal" data-bs-toggle="modal" data-bs-target="#bookingModal">Забронировать</div>
+
+        <button class="btn-reset fixed-buttons" id="scroll-to-top">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#scroll-to-top"></use>
+            </svg>
+        </button>
+    
+        <button class="btn-reset fixed-buttons" id="messages-square">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#messages-square"></use>
+            </svg>
+        </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script async src="https://app2.weatherwidget.org/js/?id=ww_f5ad4c79c848e"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="assets/js/script.js?v=6"></script>
+</body>
+</html>   

@@ -22,37 +22,72 @@ var swiper = new Swiper(".afisha-swiper, .attractions-swiper, .stocks-swiper", {
   },
 });
 
+
 ymaps.ready(init);
 function init() {
-  let howToGet = new ymaps.Map("map", {
-    center: [67.597728, 33.0836],
-    zoom: 13,
-  });
 
-  let mapResort = new ymaps.Map("map-resort", {
-    center: [67.597728, 33.0836],
-    zoom: 19,
-  });
+    let howToGet = new ymaps.Map("map", {
+      center: [67.597728, 33.0836],
+      zoom: 13,
+    });
+    let howToGetPlacemark = new ymaps.Placemark(
+      [67.597728, 33.0836],
+      {
+        iconContent: "текст",
+      },
+      {
+        preset: "islands#darkOrangeStretchyIcon",
+      }
+    );
+    howToGet.geoObjects.add(howToGetPlacemark);
 
-  let howToGetPlacemark = new ymaps.Placemark(
-    [67.597728, 33.0836],
-    {
-      iconContent: "текст",
-    },
-    {
+    let mapResort = new ymaps.Map("map-resort", {
+      center: [67.597728, 33.0836],
+      zoom: 19,
+    });
+    let restoranMapPlacemark = new ymaps.Placemark([67.597676, 33.083244], {
       preset: "islands#darkOrangeStretchyIcon",
-    }
-  );
+    });
+    mapResort.geoObjects.add(restoranMapPlacemark);
+  
+    let mapAttractionDetail = new ymaps.Map("attractions-detail-map", {
+      center: [67.568864, 36.713723],
+      zoom: 7,
+    });
+    let mapAttractionDetailPlacemark = new ymaps.Placemark(
+      [67.568864, 36.713723],
+      {
+        iconContent: "текст",
+      },
+      {
+        preset: "islands#darkOrangeStretchyIcon",
+      }
+    );
+    mapAttractionDetail.geoObjects.add(mapAttractionDetailPlacemark);
 
-  let restoranMapPlacemark = new ymaps.Placemark([67.597676, 33.083244], {
-    preset: "islands#darkOrangeStretchyIcon",
-  });
+}
 
-  howToGet.geoObjects.add(howToGetPlacemark);
-  mapResort.geoObjects.add(restoranMapPlacemark);
+ymaps.ready(initMapAttractionDetail);
+function initMapAttractionDetail() {
+  
+    let mapAttractionDetail = new ymaps.Map("attractions-detail-map", {
+      center: [67.568864, 36.713723],
+      zoom: 6,
+    });
+    let mapAttractionDetailPlacemark = new ymaps.Placemark(
+      [67.568864, 36.713723], null, {
+        iconLayout: 'default#image',
+	      iconImageHref: "/assets/images/attraction_placemark.png",
+	      iconImageSize: [63, 63],
+        iconCaption: 'Кольский полуостров'
+      }
+    );
+    mapAttractionDetail.geoObjects.add(mapAttractionDetailPlacemark);
+
 }
 
 $(function () {
+
   $(window).scroll(function () {
     if ($(this).scrollTop() > 500) {
       $("#scroll-to-top").fadeIn();
@@ -135,4 +170,28 @@ $(function () {
 	function updateSlider(){
 		$slider.slider("values", [$("#price-filter-min").val(), $("#price-filter-max").val()]);
 	}
+
+  $(window).on('resize', function() {
+    if($(this).width() <= 1024) {
+      $(".attractions-page__filters").prependTo("#filtersModal .modal-body");
+    } else {
+      $(".attractions-page__filters").prependTo(".attractions-page__wrapper");
+    }
+  });
+
+  if ($('.attractions-page__items .attractions-page__item').length == 0) {
+    $('.attractions-page__items').hide();
+    $('.attractions-page__navigation').hide();
+    $('.attractions-page__not-found').show();
+  } else {
+    $('.attractions-page__items').show();
+    $('.attractions-page__navigation').show();
+    $('.attractions-page__not-found').hide();
+  }
+
+  $('.reset-filters').on('click', function(e){
+    e.preventDefault();
+    $('button.btn-reset').click();
+  })
+  
 });
