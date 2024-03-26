@@ -22,6 +22,18 @@ var swiper = new Swiper(".afisha-swiper, .attractions-swiper, .stocks-swiper", {
   },
 });
 
+var innerSlider = new Swiper(".main-inner__slider", {
+  loop: true,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
+  },
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 ymaps.ready(init);
 function init() {
   let howToGet = new ymaps.Map("map", {
@@ -29,16 +41,13 @@ function init() {
     zoom: 13,
   });
   let howToGetPlacemark = new ymaps.Placemark(
-    [67.597728, 33.0836],
-    {
-      iconContent: "текст",
-    },
-    {
-      preset: "islands#darkOrangeStretchyIcon",
-    }
+    [67.597728, 33.0836]
   );
   howToGet.geoObjects.add(howToGetPlacemark);
+}
 
+ymaps.ready(initMapResort);
+function initMapResort() {
   let mapResort = new ymaps.Map("map-resort", {
     center: [67.597728, 33.0836],
     zoom: 19,
@@ -47,21 +56,6 @@ function init() {
     preset: "islands#darkOrangeStretchyIcon",
   });
   mapResort.geoObjects.add(restoranMapPlacemark);
-
-  let mapAttractionDetail = new ymaps.Map("attractions-detail-map", {
-    center: [67.568864, 36.713723],
-    zoom: 7,
-  });
-  let mapAttractionDetailPlacemark = new ymaps.Placemark(
-    [67.568864, 36.713723],
-    {
-      iconContent: "текст",
-    },
-    {
-      preset: "islands#darkOrangeStretchyIcon",
-    }
-  );
-  mapAttractionDetail.geoObjects.add(mapAttractionDetailPlacemark);
 }
 
 ymaps.ready(initMapAttractionDetail);
@@ -75,7 +69,7 @@ function initMapAttractionDetail() {
     null,
     {
       iconLayout: "default#image",
-      iconImageHref: "/assets/images/attraction_placemark.png",
+      iconImageHref: "/park-hotel-rus/assets/images/attraction_placemark.png",
       iconImageSize: [63, 63],
       iconCaption: "Кольский полуостров",
     }
@@ -96,6 +90,13 @@ $(function () {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
+  var used;
+
+  $('.sidebar__link-parent').on('click', function(e) {
+    
+    if( used !== this) used = this, e.preventDefault();
+  });
+
   // Sidebar menu
   $(".sidebar ul")
     .children("li")
@@ -111,12 +112,12 @@ $(function () {
 
   $(".sidebar, .header__burger").on('mouseenter', function () {
     $(".sidebar").addClass("sidebar_active");
-    $('body').css("overflowY", "hidden");
+    $('body').addClass("hidden");
   });
 
   $(".sidebar, .header__burger").on('mouseleave', function () {
     $(".sidebar").removeClass("sidebar_active");
-    $('body').css("overflowY", "scroll");
+    $('body').removeClass("hidden");
   });
 
   $(".important-info__btn").on("click", function () {
