@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/svg/logo-inner.svg" type="image/svg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=8dafc533-48c9-4baf-bffa-6020dad4aaa3&lang=ru_RU"></script>
+    <link rel="stylesheet" href="assets/css/style.css?v=7">
+    <title>Страница в разработке</title>
+</head>
+<body>
+    <header class="header-inner">
+        <div class="container-inner">
+            <div class="header">
+                <div class="header__burger">
+                    <svg width="38" height="23">
+                        <use href="assets/images/svg/icons.svg#burger-mobile"></use>
+                    </svg>
+                </div>
+                <div class="header__logo">
+                    <a href="/"><img src="assets/images/svg/logo-inner.svg" alt="Отель Русь"></a>
+                </div>
+                <nav class="header__nav">
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#clapperboard"></use>
+                        </svg>
+                        Афиша
+                    </a>
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#bed-double"></use>
+                        </svg>
+                        Размещение
+                    </a>
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#sparkles"></use>
+                        </svg>
+                        Услуги
+                    </a>
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#landmark"></use>
+                        </svg>
+                        Достопримечательности
+                    </a>
+                    <a href="#" class="header__nav-item">
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#concierge-bell"></use>
+                        </svg>
+                        Ресторан и бар
+                    </a>
+                </nav>
+                <div class="btn btn-green btn-header-phone">
+                    <span>Обратный звонок</span>
+                    <svg width="25" height="25">
+                        <use href="assets/images/svg/icons.svg#phone-incoming"></use>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sidebar sidebar-inner">
+        <ul>
+            <li class="sidebar__links-wrapper">
+                <div class="sidebar__link js-big-menu-btn button">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#burger"></use>
+                    </svg>
+                </div>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#home"></use>
+                    </svg>
+                    <div class="sidebar__text">На главную</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link sidebar__link-parent" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#bedroom"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Размещение
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="sidebar__submenu">
+                    <li>
+                        <a class="sidebar__link" href="#">
+                            <div class="sidebar__text">
+                                Номера
+                                <svg width="24" height="25">
+                                    <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </a>
+                        <ul class="sidebar__submenu">
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="#">Люкс</a></li>
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="room-detail.html">Стандарт</a></li>
+                            <li><a class="sidebar__link" href="#">Люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Президентский люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Президентский люкс</a></li>
+                            <li><a class="sidebar__link" href="#">Президентский люкс</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="sidebar__link" href="#">
+                            <div class="sidebar__text">
+                                Виллы
+                                <svg width="24" height="25">
+                                    <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="sidebar__link" href="#">
+                            <div class="sidebar__text">
+                                Коттеджи
+                                <svg width="24" height="25">
+                                    <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-address"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Как добраться
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-map"></use>
+                    </svg>
+                    <div class="sidebar__text">Карта курорта</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-about"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        О нас
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-afisha"></use>
+                    </svg>
+                    <div class="sidebar__text">Афиша</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-bar"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Ресторан и бар
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="attractions.html">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-view"></use>
+                    </svg>
+                    <div class="sidebar__text">Достопримечательности</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-spa"></use>
+                    </svg>
+                    <div class="sidebar__text">Спа</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-activity"></use>
+                    </svg>
+                    <div class="sidebar__text">Активный отдых</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-kids"></use>
+                    </svg>
+                    <div class="sidebar__text">Для детей</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-organization"></use>
+                    </svg>
+                    <div class="sidebar__text">Организация экскурсий</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-conference"></use>
+                    </svg>
+                    <div class="sidebar__text">Конференции</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-spec"></use>
+                    </svg>
+                    <div class="sidebar__text">Спецпредложения</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-news"></use>
+                    </svg>
+                    <div class="sidebar__text">Новости</div>
+                </a>
+            </li>
+            <li class="sidebar__links-wrapper">
+                <a class="sidebar__link" href="#">
+                    <svg width="24" height="25">
+                        <use href="assets/images/svg/icons.svg#sidebar-weather"></use>
+                    </svg>
+                    <div class="sidebar__text">
+                        Погода
+                        <svg width="24" height="25">
+                            <use href="assets/images/svg/icons.svg#arrow-right"></use>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="sidebar__submenu submenu__weather">
+                    <li>
+                        <div id="ww_f5ad4c79c848e" v='1.3' loc='auto' a='{"t":"horizontal","lang":"ru","ids":[],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"image","cl_font":"#FFFFFF","cl_cloud":"#FFFFFF","cl_persp":"#81D4FA","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722"}'>
+                            <a href="https://weatherwidget.org/ru/" id="ww_f5ad4c79c848e_u" target="_blank">Погодный информер погоды для сайта</a>
+                        </div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <main class="main-inner">
+        <div class="container-inner">
+            <div class="additional__wrapper d-flex">
+                <div class="additional__left">
+                    <h1 class="main-inner__main-title">Страница в Разработке</h1>
+                    <section class="main-inner__description">
+                        <p>Скоро здесь появится что-то интересное. Приносим извинения за временные неудобства.</p>
+                    </section>
+                    <a class="btn btn-green" href="/">На главную</a>
+                </div>
+                <div class="additional__right">
+                    <div class="additional__img"><img src="assets/images/svg/development.svg" alt="404"></div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+    </main>
+
+    <footer>
+        <div class="container-inner">
+            <div class="footer">
+                <div class="footer__top d-flex">
+                    <div class="footer__col">
+                        <div class="footer__link"><a href="#">Правила проживания</a></div>
+                        <div class="footer__link"><a href="#">О недопущении действий коррупционного характера</a></div>
+                        <div class="footer__link"><a href="#">Закупки</a></div>
+                        <div class="footer__link"><a href="#">Согласие на обработку персональных данных</a></div>
+                        <div class="footer__link"><a href="#">Кодекс корпоративной этики</a></div>
+                        <div class="footer__link"><a href="#">Согласие на получение рассылки рекламно-информационных материалов</a></div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__link"><a href="#">Политика в отношении обработки персональных данных</a></div>
+                        <div class="footer__link"><a href="#">Политика в области качества</a></div>
+                        <div class="footer__link"><a href="#">Политика конфиденциальности</a></div>
+                        <div class="footer__link"><a href="#">Юридическая информация</a></div>
+                        <div class="footer__link"><a href="#">Карьера</a></div>
+                        <div class="footer__link"><a href="#">Карта сайта</a></div>
+                    </div>
+                    <div class="footer__col">
+                        <div class="footer__phone"><a href="tel:89113225151">8 911 322 51 51</a></div>
+                        <div class="footer__email"><a href="mailto:domrus51@yandex.ru">domrus51@yandex.ru</a></div>
+                        <div class="footer__address">РФ, Мурманская область, территория Автоподъезд к городу Апатиты, километр 15-й База отдыха № 4, д. 1</div>
+                        <div class="footer__gps">67.597728, 33.0836 <span>GPS координаты</span></div>
+                    </div>
+                </div>
+    
+                <div class="footer__bottom d-flex">
+                    <div class="footer__copyright">
+                        © Русь 2024, Официальный сайт
+                    </div>
+                    <div class="footer__social-links">
+                        <a href="#" class="footer__social-link tg-link">
+                            <svg width="21" height="17">
+                                <use href="assets/images/svg/icons.svg#telegram"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link whatsapp-link">
+                            <svg width="23" height="23">
+                                <use href="assets/images/svg/icons.svg#whatsapp"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link ok-link">
+                            <svg width="25" height="25">
+                                <use href="assets/images/svg/icons.svg#odnoklassniki"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link vk-link">
+                            <svg width="23" height="21">
+                                <use href="assets/images/svg/icons.svg#vkontakte"></use>
+                            </svg>
+                        </a>
+                        <a href="#" class="footer__social-link youtube-link">
+                            <svg width="23" height="23">
+                                <use href="assets/images/svg/icons.svg#youtube"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="fixed-buttons__wrapper">
+        <div class="btn btn-green booking-modal" data-bs-toggle="modal" data-bs-target="#bookingModal">Забронировать</div>
+
+        <button class="btn-reset fixed-buttons" id="scroll-to-top">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#scroll-to-top"></use>
+            </svg>
+        </button>
+    
+        <button class="btn-reset fixed-buttons" id="messages-square">
+            <svg width="46" height="46">
+                <use href="assets/images/svg/icons.svg#messages-square"></use>
+            </svg>
+        </button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script async src="https://app2.weatherwidget.org/js/?id=ww_f5ad4c79c848e"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="assets/js/script.js?v=7"></script>
+</body>
+</html>   

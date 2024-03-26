@@ -107,6 +107,10 @@ p {
     display: none;
 }
 
+#messages-square svg {
+    color: var(--theme-color);
+}
+
 .modal-body {
     position: unset;
     padding: 5px;
@@ -331,6 +335,12 @@ section {
     border-radius: 99px;
 }
 
+.rooms__navigation .nav-pills .nav-link {
+    color: var(--white);
+    background: rgba(255, 255, 255, 0.19);
+    border: 1px solid transparent;
+}
+
 .nav-pills .nav-link.active {
     background-color: var(--theme-color);
     border: 1px solid var(--theme-color);
@@ -340,6 +350,11 @@ section {
 .nav-pills .nav-link:hover {
     border-color: var(--white);
     background-color: var(--white);
+}
+
+.rooms__navigation .nav-pills .nav-link:hover {
+    background: rgba(255, 255, 255, 0.42);
+    border: 1px solid transparent;
 }
 
 .breadcrumbs {
@@ -539,16 +554,16 @@ main {
 .main__title {
     margin-bottom: 25px;
     color: var(--white);
-    font-size: 80px;
+    font-size: calc((100vw - 375px) /(1920 - 375)*(80 - 36) + 36px);
     font-weight: 700;
-    line-height: 98px;
+    line-height: calc((100vw - 375px) /(1920 - 375)*(98 - 44) + 44px);
 }
 
 .main__subtitle {
     color: var(--white);
-    font-size: 40px;
+    font-size: calc((100vw - 375px) /(1920 - 375)*(40 - 20) + 20px);
     font-weight: 500;
-    line-height: 49px;
+    line-height: calc((100vw - 375px) /(1920 - 375)*(49 - 24) + 24px);
 }
 
 .booking__form {
@@ -584,16 +599,25 @@ main {
     -o-transition: all .15s;
     transition: all .15s;
     mix-blend-mode: difference;
-    z-index: 12;
+    z-index: 9999;
 }
 
 .sidebar.sidebar-inner {
     mix-blend-mode: unset;
 }
 
-.sidebar > ul {
-    overflow-x: hidden;
-    overflow-y: auto;
+.sidebar.sidebar_active > ul {
+    height: 100vh;
+    overflow: scroll;
+}
+
+.sidebar.sidebar_active {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.sidebar.sidebar_active::-webkit-scrollbar {
+    display: none;
 }
 
 .sidebar ul li {
@@ -604,7 +628,7 @@ main {
     display: block;
 }
 
-.sidebar:hover, .sidebar_active {
+.sidebar.sidebar_active {
     width: 350px;
     background-color: var(--black);
     mix-blend-mode: unset;
@@ -815,7 +839,7 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
 
 .afisha {
     margin-bottom: 220px;
-    padding-left: 110px;
+    padding-left: 5.5vw;
 }
 
 .afisha__wrapper {
@@ -880,7 +904,7 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
 /* Достопримечательности */
 
 .attractions {
-    padding-left: 110px;
+    padding-left: 5.5vw;
 }
 
 .attractions__wrapper {
@@ -952,6 +976,7 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
 }
 
 .rooms__left {
+    margin-top: 55px;
     max-width: 640px;
 }
 
@@ -1079,11 +1104,12 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
 
 .how-to-get__wrapper {
     display: flex;
+    gap: 115px;
     justify-content: space-between;
 }
 
 .how-to-get__left {
-    width: 17vw;
+    width: 320px;
 }
 
 .how-to-get__right {
@@ -1448,9 +1474,13 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
 /* Подвал сайта */
 
 .footer {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
     border-top: 1px solid var(--footer-border);
+}
+
+.footer__wrapper {
+    display: flex;
 }
 
 .footer a {
@@ -2032,6 +2062,15 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
     background: rgba(0, 0, 0, 0.46);
 }
 
+.attractions-page__item:hover {
+    box-shadow: 0px 4px 12.1px 0px rgba(26, 73, 15, 0.67);
+    cursor: pointer;
+}
+
+.attractions-page__item:hover::before {
+    background: none;
+}
+
 .attractions-page__item a {
     position: absolute;
     top: 0;
@@ -2346,7 +2385,101 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
     color: var(--black);
 }
 
+/* СТраница 404 и страница в разработке */
+
+.additional__wrapper {
+    margin-top: 5.5vw;
+    padding-bottom: 10vw;
+    gap: 13vw;
+}
+
+.additional__wrapper .main-inner__description {
+    max-width: 765px;
+    margin-bottom: 35px;
+}
+
+.additional__left {
+    padding-top: 30px;
+}
+
+.additional__img {
+    position: relative;
+    width: 376px;
+    height: 376px;
+    border-radius: 50%;
+    background: #EAF8E7;
+}
+
+.additional__img img {
+    position: absolute;
+    left: -50px;
+    width: 488px;
+    height: 376px;
+    object-fit: none;
+}
+
+/* Внутренняя главная */
+
+.header-inner__phones {
+    display: inline-flex;
+    gap: 50px;
+}
+
+.header-inner__phones a {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    color: var(--black);
+}
+
+.btn-header-chat {
+    padding: 13px 30px;
+}
+
+.btn-header-chat svg {
+    margin-right: 10px;
+}
+
 /* Медиа запросы */
+
+@media (max-width: 1299px) {
+    .rooms__wrapper {
+        flex-direction: column;
+    }
+    .rooms__left {
+        margin-top: 0;
+        order: 2;
+        max-width: 100%;
+    }
+    .rooms__right {
+        order: 1;
+        margin-top: 0;
+    }
+    .rooms__desc p {
+        margin-bottom: 20px;
+    }
+    .how-to-get__wrapper {
+        flex-direction: column;
+    }
+    .how-to-get__left, .how-to-get__right {
+        width: 100%;
+    }
+    #accordionHowToGet .accordion-body {
+        max-width: 100%;
+    }
+    
+}
+
+@media (max-width: 1199px) {
+    .main-page-news .news__items {
+        display: flex!important;
+        overflow-x: scroll;
+    }
+    .main-page-news .news__item {
+        min-width: 240px;
+        height: 300px;
+    }
+}
 
 @media (max-width: 1024px) {
     .attractions-page__wrapper {
@@ -2368,6 +2501,13 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
 }
 
 @media (max-width: 992px) {
+    header {
+        position: static;
+        height: 100%;
+    }
+    .main-inner__main-title {
+        margin-bottom: 30px;
+    }
     .header__burger {
         display: block;
         color: #777777;
@@ -2437,9 +2577,99 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
         width: 55px;
         height: 55px;
     }
+    .additional__wrapper {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .additional__right {
+        order: 1;
+    }
+    .additional__left {
+        padding-top: 0;
+        order: 2;
+    }
+    .additional__img {
+        width: 130px;
+        height: 130px;
+        margin: 0 auto;
+    }
+    .additional__img img {
+        left: -20px;
+        object-fit: contain;
+        width: 170px;
+        height: 130px;
+    }
+    .main-inner__description {
+        max-width: 100%;
+    }
+    .additional__left a {
+        width: 100%;
+    }
+    .additional__left .main-inner__main-title {
+        text-align: center;
+    }
+    #map-resort-tabs {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    #map-resort-tabs li {
+        white-space: nowrap;
+    }
+    .reviews {
+        padding-bottom: 0;
+    }
+    .reviews::before {
+        width: 100%;
+        height: 83%;
+        border-radius: 0px 30px 0px 0px;
+    }
+    .reviews__wrapper {
+        flex-direction: column;
+    }
+    .reviews__iframe {
+        padding: 15px!important;
+        margin: 0 auto;
+        width: 320px!important;
+        height: 555px!important;
+    }
+    .reviews__images {
+        display: flex!important;
+        overflow-x: scroll;
+        border-radius: unset;
+    }
+    .review__image {
+        min-width: 270px;
+        height: 200px;
+    }
+    .rooms__images {
+        display: flex;
+        border-radius: unset;
+        overflow-x: scroll;
+    }
+    .rooms__image {
+        min-width: 270px;
+        height: 200px;
+    }
+    .hotel-infrastructure {
+        border-radius: 0px 0px 30px 0px;
+    }
+    .stocks {
+        border-radius: 30px 0px 0px 0px;
+    }
+    .hotel-infrastructure .nav-pills {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+    .hotel-infrastructure .nav-pills li {
+        white-space: nowrap;
+    }
 }
 
 @media (max-width: 768px) {
+    .main__title-wrapper {
+        max-width: 100%;
+        text-align: center;
+    }
     .section__title {
         margin-bottom: 30px;
     }
@@ -2498,5 +2728,11 @@ background: linear-gradient(90.00deg, rgba(228, 228, 228, 0),rgb(202, 241, 194) 
     .attraction-detail__route {
         padding: 20px;
         gap: 20px;
+    }
+}
+
+@media (max-width: 499px) {
+    .rooms__specifications {
+        grid-template-columns: 1fr;
     }
 }

@@ -430,9 +430,15 @@
 </symbol>
 
 <symbol id="messages-square" width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26.75 17.375C26.75 18.3696 26.3549 19.3234 25.6516 20.0266C24.9484 20.7299 23.9946 21.125 23 21.125H11.75L4.25 28.625V8C4.25 5.9375 5.9375 4.25 8 4.25H23C23.9946 4.25 24.9484 4.64509 25.6516 5.34835C26.3549 6.05161 26.75 7.00544 26.75 8V17.375Z" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M34.25 17.375H38C38.9946 17.375 39.9484 17.7701 40.6516 18.4734C41.3549 19.1766 41.75 20.1304 41.75 21.125V41.75L34.25 34.25H23C22.0054 34.25 21.0516 33.8549 20.3484 33.1516C19.6451 32.4484 19.25 31.4946 19.25 30.5V28.625" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.75 17.375C26.75 18.3696 26.3549 19.3234 25.6516 20.0266C24.9484 20.7299 23.9946 21.125 23 21.125H11.75L4.25 28.625V8C4.25 5.9375 5.9375 4.25 8 4.25H23C23.9946 4.25 24.9484 4.64509 25.6516 5.34835C26.3549 6.05161 26.75 7.00544 26.75 8V17.375Z" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M34.25 17.375H38C38.9946 17.375 39.9484 17.7701 40.6516 18.4734C41.3549 19.1766 41.75 20.1304 41.75 21.125V41.75L34.25 34.25H23C22.0054 34.25 21.0516 33.8549 20.3484 33.1516C19.6451 32.4484 19.25 31.4946 19.25 30.5V28.625" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
+
+<symbol id="messages-square-inner" width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18.083 11.6247C18.083 12.3098 17.8108 12.9669 17.3264 13.4514C16.8419 13.9358 16.1848 14.208 15.4997 14.208H7.74967L2.58301 19.3747V5.16634C2.58301 3.74551 3.74551 2.58301 5.16634 2.58301H15.4997C16.1848 2.58301 16.8419 2.85518 17.3264 3.33965C17.8108 3.82412 18.083 4.4812 18.083 5.16634V11.6247Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M23.2503 11.625H25.8337C26.5188 11.625 27.1759 11.8972 27.6604 12.3816C28.1448 12.8661 28.417 13.5232 28.417 14.2083V28.4167L23.2503 23.25H15.5003C14.8152 23.25 14.1581 22.9778 13.6736 22.4934C13.1892 22.0089 12.917 21.3518 12.917 20.6667V19.375" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
 
 <symbol id="phone-incoming" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M16.5 2.5V8.5H22.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -487,5 +493,19 @@
 <path d="M25.5 5.5H5.5C4.11929 5.5 3 6.61929 3 8V23C3 24.3807 4.11929 25.5 5.5 25.5H25.5C26.8807 25.5 28 24.3807 28 23V8C28 6.61929 26.8807 5.5 25.5 5.5Z" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M28 9.25L16.7875 16.375C16.4016 16.6168 15.9554 16.745 15.5 16.745C15.0446 16.745 14.5984 16.6168 14.2125 16.375L3 9.25" stroke="#32A517" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 </symbol>
+
+<symbol id="percent-square" width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 3.5H5C3.89543 3.5 3 4.39543 3 5.5V19.5C3 20.6046 3.89543 21.5 5 21.5H19C20.1046 21.5 21 20.6046 21 19.5V5.5C21 4.39543 20.1046 3.5 19 3.5Z" stroke="#295047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 9.5L9 15.5" stroke="#295047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M9 9.5H9.01" stroke="#295047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 15.5H15.01" stroke="#295047" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+<symbol id="close-btn" width="24" height="21" viewBox="0 0 24 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.5 2.5L3.5 19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M3.5 2.5L20.5 19.5" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol>
+
+
 
 </svg>
